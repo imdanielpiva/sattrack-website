@@ -17,11 +17,11 @@ require('./src/js/scrollIt');
 require('./src/js/init');
 
 const headerElement = $('.header-background');
-let parent;
-let caption;
 let headline;
-let p;
+let caption;
+let parent;
 let image;
+let p;
 
 function addElement(element, src, elmClass, title, content) {
   if (element === 'img') {
