@@ -16,7 +16,9 @@ require('./src/js/carousel');
 require('./src/js/scrollIt');
 require('./src/js/init');
 
+const velAnimation = require('./src/js/place-icon-animation');
 const headerElement = $('.header-background');
+const containerElement = $('#container');
 let parent;
 let caption;
 let headline;
@@ -32,6 +34,32 @@ function addElement(element, src, elmClass, title, content) {
         'background-position': 'center',
         'background-size': 'cover'
       });
+
+    return;
+  }
+
+  if (element === 'animation') {
+    velAnimation.animateDots();
+    console.log($(headerElement).css({
+      'background-image': 'url(' + require('./src/images/' + src) +')',
+      'background-position': '2% 80%'
+      // 'bottom': '6906',
+      // 'height': '7375', 
+      // 'left': '-29', 
+      // 'right': '369', 
+      // 'top': '-469', 
+      // 'width': '398'
+    }));
+
+    console.log($(containerElement).css({
+      'bottom': '6906',
+      'height': '7375', 
+      'left': '-29', 
+      'right': '369', 
+      'top': '-469', 
+      'width': '398',
+      'z-index': '5000000'
+    }));
 
     return;
   }
@@ -96,7 +124,7 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
-    addElement('img', 'phone-bg.jpg');
+    addElement('animation', 'foto-desktop.jpg');
 
     return;
   }
