@@ -30,6 +30,7 @@ p {
 
 .parallax-container .section {
   width: 100%;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1510px) {
@@ -217,6 +218,7 @@ footer.page-footer {
 
 .pb-72 {
   padding:0 0 72px !important;
+  z-index: 100 !important; 
 }
 
 .m-tb-16 {
