@@ -6,14 +6,13 @@ function animateDots() {
 	var	isAndroid = /Android/i.test(navigator.userAgent);
 	var	isIE = document.documentMode;
 
-	$('<div></div>').attr('id', 'container-father').append($('<div></div>').attr('id', 'container')).appendTo($('.header-background'));
+	$('<div></div>').attr('id', 'container').appendTo($('#index-banner'));
+	$('<img src="' + require('../images/foto-desktop.jpg') +'">').css({'position': 'absolute', 'top': '-500px'}).appendTo('#index-banner');
 			
-	var $container = $("#container");
-	var $containerFather = $("#container-father");
-	$($containerFather).append($($container));
+	const $container = $("#container");
 
 	for (var i = 0; i < 25; i++) {
-		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({'width': '226px','height': '295px','position': 'absolute','background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
+		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({'width': '226px','height': '295px','background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
 	}
 	
 	var screenWidth = window.screen.availWidth,
@@ -48,7 +47,7 @@ function animateDots() {
 			y: $('#dot24')
 		}
 	
-	$container.css("perspective-origin", screenWidth/2 + "px" + ((screenHeight * 0.45) - chromeHeight) + "px")
+	$container.css({'position': 'absolute', 'top': '-500px', 'z-index': '1'})
 	const sequence1 = [
 		//Begin of dot0
 		{ e: dot.a, p: { translateX: 75, translateY: 586 }, o: { duration: 0, begin: () => {
@@ -154,72 +153,72 @@ function animateDots() {
 		} } }
 	]
 	const sequence2 = [
-		{ e: dot.a, p: { translateX: 920, translateY: 430 },    o: { duration: 20000, sequenceQueue: false } },
-		{ e: dot.b, p: { translateX: -50, translateY: 448 },    o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.c, p: { translateX: 1100, translateY: 310 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: 390, translateY: -50 },    o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.e, p: { translateX: -50, translateY: -430 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.r, p: { translateX: 1590, translateY: -1150 }, o: { duration: 10000 } },
-		{ e: dot.s, p: { translateX: 780, translateY: -4790 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.u, p: { translateX: 800, translateY: -5400 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.v, p: { translateX: 265, translateY: -5315 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.w, p: { translateX: 280, translateY: -5630 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.x, p: { translateX: 1650, translateY: -5900 }, o: {duration: 10000, sequenceQueue: false  } },
-		{ e: dot.y, p: { translateX: 1750, translateY: -6710 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.a, p: { translateX: 1020, translateY: 410 },    o: { duration: 50000, sequenceQueue: false  } },
+		{ e: dot.b, p: { translateX: -50, translateY: 458 },    o: { duration: 10000, sequenceQueue: false } },
+		{ e: dot.c, p: { translateX: 1100, translateY: 310 },   o: { duration: 10000 } },
+		{ e: dot.d, p: { translateX: 390, translateY: -50 },    o: { duration: 10000} },
+		{ e: dot.e, p: { translateX: -50, translateY: -430 },   o: { duration: 10000 } },
+		{ e: dot.r, p: { translateX: 1590, translateY: -1150 }, o: { duration: 10000} },
+		{ e: dot.s, p: { translateX: 780, translateY: -4790 },  o: { duration: 10000} },
+		{ e: dot.u, p: { translateX: 800, translateY: -5400 },  o: { duration: 10000} },
+		{ e: dot.v, p: { translateX: 265, translateY: -5315 },  o: { duration: 10000 } },
+		{ e: dot.w, p: { translateX: 280, translateY: -5630 },  o: { duration: 10000 } },
+		{ e: dot.x, p: { translateX: 1650, translateY: -5900 }, o: { duration: 10000   } },
+		{ e: dot.y, p: { translateX: 1750, translateY: -6710 }, o: { duration: 10000  } }
 	]
 	const sequence3 = [
-		{ e: dot.a, p: { translateX: 1470, translateY: 700 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.b, p: { translateX: -200, translateY: 520 },   o: { duration: 10000, visibility: "hidden", sequenceQueue: false } },
-		{ e: dot.c, p: { translateX: 1750, translateY: 20 },    o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: 600, translateY: 10 },     o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.e, p: { translateX: 150, translateY: -500 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.r, p: { translateX: 1720, translateY: -1090 }, o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.s, p: { translateX: 1000, translateY: -4650 }, o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.u, p: { translateX: 400, translateY: -5100 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.v, p: { translateX: 270, translateY: -5290 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.w, p: { translateX: 460, translateY: -5720 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.x, p: { translateX: 1500, translateY: -5800 }, o: {duration: 10000, sequenceQueue: false  } },
-		{ e: dot.y, p: { translateX: 1750, translateY: -6610 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.a, p: { translateX: 1470, translateY: 700 },   o: { duration: 20000, sequenceQueue: false } },
+		{ e: dot.b, p: { translateX: -200, translateY: 520 },   o: { duration: 30000, visibility: "hidden", sequenceQueue: false } },
+		{ e: dot.c, p: { translateX: 1750, translateY: 20 },    o: { duration: 20000, sequenceQueue: false } },
+		{ e: dot.d, p: { translateX: 600, translateY: 10 },     o: { duration: 30000, sequenceQueue: false } },
+		{ e: dot.e, p: { translateX: 150, translateY: -500 },   o: { duration: 20000, sequenceQueue: false } },
+		{ e: dot.r, p: { translateX: 1720, translateY: -1090 }, o: { duration: 30000, sequenceQueue: false } },
+		{ e: dot.s, p: { translateX: 1000, translateY: -4650 }, o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.u, p: { translateX: 400, translateY: -5100 },  o: { duration: 30000, sequenceQueue: false } },
+		{ e: dot.v, p: { translateX: 270, translateY: -5290 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.w, p: { translateX: 460, translateY: -5720 },  o: { duration: 30000, sequenceQueue: false } },
+		{ e: dot.x, p: { translateX: 1500, translateY: -5800 }, o: {duration: 40000, sequenceQueue: false  } },
+		{ e: dot.y, p: { translateX: 1750, translateY: -6610 }, o: { duration: 30000, sequenceQueue: false } }
 	]
 	const sequence4 = [
-		{ e: dot.a, p: { translateX: 1040, translateY: 900 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.c, p: { translateX: 1770, translateY: -200 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: 1000, translateY: -140 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.r, p: { translateX: 1820, translateY: -980 },  o: { duration: 10000, visibility: "hidden" } },
-		{ e: dot.u, p: { translateX: 150, translateY: -4900 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.v, p: { translateX: -50, translateY: -5040 },  o: { duration: 10000, visibility: "hidden", sequenceQueue: false } },
-		{ e: dot.w, p: { translateX: 590, translateY: -5820 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.x, p: { translateX: 1300, translateY: -5600 }, o: {duration: 10000, visibility: "hidden" , sequenceQueue: false } },
-		{ e: dot.y, p: { translateX: 1740, translateY: -6510 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.a, p: { translateX: 1040, translateY: 900 },   o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.c, p: { translateX: 1770, translateY: -200 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.d, p: { translateX: 1000, translateY: -140 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.r, p: { translateX: 1820, translateY: -980 },  o: { duration: 40000, visibility: "hidden" } },
+		{ e: dot.u, p: { translateX: 150, translateY: -4900 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.v, p: { translateX: -50, translateY: -5040 },  o: { duration: 40000, visibility: "hidden", sequenceQueue: false } },
+		{ e: dot.w, p: { translateX: 590, translateY: -5820 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.x, p: { translateX: 1300, translateY: -5600 }, o: {duration: 40000, visibility: "hidden" , sequenceQueue: false } },
+		{ e: dot.y, p: { translateX: 1740, translateY: -6510 }, o: { duration: 40000, sequenceQueue: false } }
 	]
 	const sequence5 = [
-		{ e: dot.a, p: { translateX: 800, translateY: 1040 },   o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.c, p: { translateX: 1740, translateY: -300 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: 1300, translateY: -250 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.u, p: { translateX: -90, translateY: -4740 },  o: { duration: 10000, visibility: "hidden" } },
-		{ e: dot.w, p: { translateX: 830, translateY: -6000 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.y, p: { translateX: 1635, translateY: -6420 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.a, p: { translateX: 800, translateY: 1040 },   o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.c, p: { translateX: 1740, translateY: -300 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.d, p: { translateX: 1300, translateY: -250 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.u, p: { translateX: -90, translateY: -4740 },  o: { duration: 40000, visibility: "hidden" } },
+		{ e: dot.w, p: { translateX: 830, translateY: -6000 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.y, p: { translateX: 1635, translateY: -6420 }, o: { duration: 40000, sequenceQueue: false } }
 	]
 	const sequence6 = [
-		{ e: dot.a, p: { translateX: 680, translateY: 1155 },   o: { duration: 10000, visibility: "hidden", sequenceQueue: false} },
-		{ e: dot.c, p: { translateX: 1830, translateY: -350 },  o: { duration: 10000, visibility: "hidden" } },
-		{ e: dot.d, p: { translateX: 1150, translateY: -350 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.w, p: { translateX: 1100, translateY: -6200 }, o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.y, p: { translateX: 1335, translateY: -6320 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.a, p: { translateX: 680, translateY: 1155 },   o: { duration: 40000, visibility: "hidden", sequenceQueue: false} },
+		{ e: dot.c, p: { translateX: 1830, translateY: -350 },  o: { duration: 40000, visibility: "hidden" } },
+		{ e: dot.d, p: { translateX: 1150, translateY: -350 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.w, p: { translateX: 1100, translateY: -6200 }, o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.y, p: { translateX: 1335, translateY: -6320 }, o: { duration: 40000, sequenceQueue: false } }
 	]
 	const sequence7 = [
 		{ e: dot.a, p: { translateX: 0, translateY: 0 }, o: { duration: 0, visibility: "hidden", sequenceQueue: false} },
-		{ e: dot.d, p: { translateX: 930, translateY: -460 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.y, p: { translateX: 925, translateY: -6120 }, o: { duration: 10000, sequenceQueue: false } }
+		{ e: dot.d, p: { translateX: 930, translateY: -460 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.y, p: { translateX: 925, translateY: -6120 }, o: { duration: 40000, sequenceQueue: false } }
 	]
 	const sequence8 = [
 		{ e: dot.a, p: { translateX: 0, translateY: 0 }, o: { duration: 0, visibility: "hidden", sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: 530, translateY: -180 },  o: { duration: 10000, sequenceQueue: false } },
-		{ e: dot.y, p: { translateX: 645, translateY: -5880 }, o: { duration: 10000, visibility: "hidden", sequenceQueue: false } }
+		{ e: dot.d, p: { translateX: 530, translateY: -180 },  o: { duration: 40000, sequenceQueue: false } },
+		{ e: dot.y, p: { translateX: 645, translateY: -5880 }, o: { duration: 40000, visibility: "hidden", sequenceQueue: false } }
 	]
 	const sequence9 = [
 		{ e: dot.a, p: { translateX: 0, translateY: 0 }, o: { duration: 0, visibility: "hidden", sequenceQueue: false } },
-		{ e: dot.d, p: { translateX: -200, translateY: 400 }, o: { duration: 10000, sequenceQueue: false } } 
+		{ e: dot.d, p: { translateX: -200, translateY: 400 }, o: { duration: 40000, sequenceQueue: false } } 
 	]
 
 	$.Velocity.RunSequence(sequence1);
@@ -231,6 +230,6 @@ function animateDots() {
 	$.Velocity.RunSequence(sequence7);
 	$.Velocity.RunSequence(sequence8);
 	$.Velocity.RunSequence(sequence9);	
-	return  console.log($containerFather);
+	return;
 		  
 }
