@@ -1,10 +1,10 @@
 // stuffs.js
 window.onload = renderElement('high');
-
 require('./src/js/initial');
 require('./src/js/jquery.easing.1.4');
 require('./src/js/animation');
 require('./src/js/velocity.min');
+require('./src/js/velocity.ui');
 require('./src/js/hammer.min');
 require('./src/js/jquery.hammer');
 require('./src/js/global');
@@ -16,7 +16,7 @@ require('./src/js/carousel');
 require('./src/js/scrollIt');
 require('./src/js/init');
 
-const velAnimation = require('./src/js/place-icon-animation');
+const velAnimation = require('./src/js/place-icons-animation');
 const headerElement = $('.header-background');
 const containerElement = $('#container');
 let parent;
@@ -39,29 +39,8 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'animation') {
-    velAnimation.animateDots();
-    console.log($(headerElement).css({
-      'background-image': 'url(' + require('./src/images/' + src) +')',
-      'background-position': '2% 80%'
-      // 'bottom': '6906',
-      // 'height': '7375', 
-      // 'left': '-29', 
-      // 'right': '369', 
-      // 'top': '-469', 
-      // 'width': '398'
-    }));
-
-    console.log($(containerElement).css({
-      'bottom': '6906',
-      'height': '7375', 
-      'left': '-29', 
-      'right': '369', 
-      'top': '-469', 
-      'width': '398',
-      'z-index': '5000000'
-    }));
-
-    return;
+      velAnimation.animateDots();
+      return;
   }
 
   if (element === 'video') {
@@ -124,12 +103,12 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
-    addElement('animation', 'foto-desktop.jpg');
+    addElement('animation');
 
     return;
   }
   if (width <= 768) {
-    addElement('img', 'tablet-bg.jpg');
+    addElement('video', 'video.mp4', 'video-background');
 
     return;
   }
