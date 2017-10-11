@@ -1,21 +1,23 @@
-# Sattrack Rastreamento e Logística website
+# Sattrack Rastreamento e Logística Website
 
 Simple website based on materialize parallax theme.
 
-### install dependencies
+### Install dependencies
 ```bash
 npm install
 ```
 
 
-### build
+### Build
 ```bash
 npm run build
 ```
 
-### watch files 
+### Watch files 
 ```bash
 npm run watch
 ```
 
 This project has been made by @maurojr, @ruankenedi and I.
+
+![Sattrack logo](http://satlogo.surge.sh/logo.png)
