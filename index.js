@@ -18,7 +18,7 @@ require('./src/js/init');
 
 const velAnimation = require('./src/js/place-icons-animation');
 const headerElement = $('.header-background');
-const containerElement = $('#container');
+const containerElement = $("#container");
 let parent;
 let caption;
 let headline;
@@ -108,7 +108,7 @@ function renderElement(priority) {
     return;
   }
   if (width <= 768) {
-    addElement('video', 'video.mp4', 'video-background');
+    addElement('animation');
 
     return;
   }
