@@ -1,27 +1,27 @@
 // stuffs.js
 window.onload = renderElement('high');
 
-require('./src/js/initial');
-require('./src/js/jquery.easing.1.4');
-require('./src/js/animation');
-require('./src/js/velocity.min');
-require('./src/js/hammer.min');
-require('./src/js/jquery.hammer');
-require('./src/js/global');
-require('./src/js/parallax');
-require('./src/js/waves');
-require('./src/js/sideNav');
-require('./src/js/isOnScreen');
-require('./src/js/carousel');
-require('./src/js/scrollIt');
-require('./src/js/init');
+import './src/js/initial';
+import './src/js/jquery.easing.1.4';
+import './src/js/animation';
+import './src/js/velocity.min';
+import './src/js/hammer.min';
+import './src/js/jquery.hammer';
+import './src/js/global';
+import './src/js/parallax';
+import './src/js/waves';
+import './src/js/sideNav';
+import './src/js/isOnScreen';
+import './src/js/carousel';
+import './src/js/scrollIt';
+import './src/js/init';
 
 const headerElement = $('.header-background');
-let parent;
-let caption;
 let headline;
-let p;
+let caption;
+let parent;
 let image;
+let p;
 
 function addElement(element, src, elmClass, title, content) {
   if (element === 'img') {
@@ -88,9 +88,7 @@ function renderElement(priority) {
   const { width } = screen;
 
   if (priority === 'high') {
-    window.addEventListener('load', () => {
-      renderElement();
-    });
+    window.addEventListener('load', () => { renderElement(); });
 
     return;
   }
