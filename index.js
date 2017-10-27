@@ -15,6 +15,7 @@ import './src/js/isOnScreen';
 import './src/js/carousel';
 import './src/js/scrollIt';
 import './src/js/init';
+import './src/js/modal';
 
 const headerElement = $('.header-background');
 let headline;
@@ -66,7 +67,7 @@ function addElement(element, src, elmClass, title, content) {
         bottom: '0',
         'z-index': '-1'
       });
-
+      
     caption.append(headline);
     caption.append(p);
     parent.append(caption);
@@ -82,7 +83,32 @@ function addElement(element, src, elmClass, title, content) {
       $('.right-slide').append(parent);
     }
   }
+/////////////////////////////////////////banner-img
+  if (element === 'banner-slide' && elmClass) {
+    parent = $('<li></li>').addClass('banner-carousel-item');
+    caption = $('<div></div>').addClass(`banner-regular-caption ${elmClass}`);
+    headline = $('<h3></h3>').addClass('banner-light').html(title);
+    p = $('<h5></h5>').addClass('banner-light banner-grey-text banner-text-lighten-2').html(content);
+    image = $('<div></div>')
+      .addClass('banner-slide-mask')
+      .css({
+        'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(' + require('./src/images/' + src) +')',
+        'background-position': '-90%',
+        'background-size': 'cover',
+        'width': '100%',
+      });
+      
+    caption.append(headline);
+    caption.append(p);
+    parent.append(caption);
+    parent.append(image);
+    parent.appendTo('.header-background');
+  }
 }
+
+
+
+
 
 function renderElement(priority) {
   const { width } = screen;
@@ -104,15 +130,16 @@ function renderElement(priority) {
     return;
   }
   if (width > 768) {
-    addElement('video', 'video.mp4', 'video-background');
+    // addElement('img', 'promo.svg');
+    // addElement('video', 'video.mp4', 'video-background');
   }
 }
-
 
 $(window).resize(() => {
   renderElement();
 });
 
+addElement('banner-slide', 'promo.svg', 'left-caption', 'Promoção.', 'll');
 addElement('slide', 'main-car-slide.png', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
 addElement('slide', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');
 addElement('slide', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a iginção do seu veículo for ativida.');

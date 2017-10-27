@@ -497,10 +497,6 @@
           setupEvents();
           scroll(offset);
 
-          $(this).on('dragLeft', function(event) {});
-
-          $(this).on('dragRight', function(event) {});
-
           $(this).on('drag', function() {
             autoplayStatus._shouldPlay = false;
             autoplay(event, autoplayStatus);
@@ -552,6 +548,15 @@
       },
       autoplay: function({ speed, enabled }) {
         $(this).trigger('autoplay', { speed, enabled });
+      },
+      next : function(n, callback) {
+        $(this).trigger('carouselNext', [n, callback]);
+      },
+      prev : function(n, callback) {
+        $(this).trigger('carouselPrev', [n, callback]);
+      },
+      set : function(n, callback) {
+        $(this).trigger('carouselSet', [n, callback]);
       }
     };
   

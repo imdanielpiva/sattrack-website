@@ -30,6 +30,8 @@ p {
 
 .parallax-container .section {
   width: 100%;
+  margin-top: 350px;
+  /*mudei*/
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1510px) {
@@ -191,6 +193,10 @@ footer.page-footer {
 }
 
 .regular-caption {
+  padding: 6%;
+}
+
+.banner-regular-caption {
   padding: 6%;
 }
 
@@ -403,6 +409,19 @@ img.second-truck-tier {
   position: sticky;
   bottom: 0;
   z-index: -1;
+}
+
+.banner-slide-mask {
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.60), 
+    rgba(0, 0, 0, 0.60) 
+  );
+  background-position: 100%;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+    margin-top: -300px;
 }
 
 .about-content p {
