@@ -32,6 +32,7 @@ p {
   width: 100%;
   /* margin-top: 350px; */
   /*mudei*/
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1510px) {
@@ -40,9 +41,6 @@ p {
     min-height: 56px;
     height: auto;
   }
-  /* .btn {
-    display: none;
-  } */
 }   
 
 @media only screen and (max-width : 992px) {
@@ -51,13 +49,19 @@ p {
     top: 40%;
   }
   #index-banner .section {
-    top: 10%;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    width: 100%;
+    height: 100vh;
   }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+    background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
+    width: 100%;
+    height: 100vh;
   }
 }
 
@@ -77,7 +81,7 @@ footer.page-footer {
 }
 
 #for-you {
-  margin-top: -32px;  
+  margin-top: -15px;  
 }
 
 #sidenav-overlay {
@@ -110,13 +114,19 @@ footer.page-footer {
 
 .header-background {
   width: 100%;
-  height: 94vh;
   min-height: 360px;
   background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url(../images/fallback.png);
 }
 
+@media only screen and (max-width : 768px) and (min-width: 501px)  {
+  .header-background {
+     height: 100vh;
+     background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url(../images/fallback.png);
+  }
+}
+
 .slide-wrapper, .slider {
-  height: 660px !important;
+  height: 96vh !important;
 }
 
 .controls {
@@ -223,6 +233,7 @@ footer.page-footer {
 
 .pb-72 {
   padding:0 0 72px !important;
+  z-index: 100 !important; 
 }
 
 .m-tb-16 {
@@ -682,7 +693,8 @@ img.second-truck-tier {
   }
 
   .slide-wrapper, .slider {
-    height: 100vh;
+    background: rgba(255, 255, 255, 0) !important;
+    height: 100vh !important;
     min-height: 580px !important;
   }
 

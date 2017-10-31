@@ -39,7 +39,6 @@
           var noWrap = (view.attr('data-no-wrap') || options.noWrap) || !hasMultipleSlides;
           var uniqueNamespace = view.attr('data-namespace') || namespace+i;
           view.attr('data-namespace', uniqueNamespace);
-
           // Options
           var setCarouselHeight = function(imageOnly) {
             var firstSlide = view.find('.carousel-item.active').length ? view.find('.carousel-item.active').first() : view.find('.carousel-item').first();
@@ -78,7 +77,6 @@
               view.find('.carousel-fixed-item').addClass('with-indicators');
             }
           }
-
           // Don't double initialize.
           if (view.hasClass('initialized')) {
             // Recalculate variables
@@ -141,7 +139,6 @@
             if (e.targetTouches && (e.targetTouches.length >= 1)) {
               return e.targetTouches[0].clientX;
             }
-
             return e.clientX;
           }
   
@@ -367,7 +364,6 @@
             clearInterval(ticker);
             ticker = setInterval(track, 100);
           }
-
           function drag(e) {
             var x, delta, deltaY;
             if (pressed) {

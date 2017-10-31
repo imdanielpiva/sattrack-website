@@ -27,8 +27,8 @@ module.exports = {
     new ExtractTextPlugin("styles.css"),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'modules'
-    // })
-    // new UglifyJSPlugin()
+    // }),
+    new UglifyJSPlugin()
   ],
   output: {
     path: path.resolve(__dirname, 'dist/'),
@@ -64,7 +64,15 @@ module.exports = {
               options: {
                 minimize: false 
               }
-            }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: 'postcss.config.js'
+                }
+              }
+            },
           ]
         })
       },

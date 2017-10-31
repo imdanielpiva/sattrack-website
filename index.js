@@ -17,7 +17,11 @@ import './src/js/scrollIt';
 import './src/js/init';
 import './src/js/modal';
 
+const velAnimation = require('./src/js/place-icons-animation');
 const headerElement = $('.header-background');
+const containerElement = $("#container");
+let parent;
+let caption;
 let headline;
 let caption;
 let parent;
@@ -34,6 +38,24 @@ function addElement(element, src, elmClass, title, content) {
         'background-position': 'center',
         'background-size': 'cover'
       });
+
+    return;
+  }
+
+  if (element === 'animation') {
+      velAnimation.animateDots();
+      return;
+  }
+
+  if (element === 'video') {
+    $(headerElement).append($('<video></video>')
+      .addClass(elmClass || '')
+      .attr({
+        src: require('./src/images/' + src),
+        autoplay: true,
+        loop: true,
+        muted: true
+      }));
 
     return;
   }
@@ -116,12 +138,12 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
-    addElement('img', 'phone-bg.jpg');
+    addElement('animation');
 
     return;
   }
   if (width <= 768) {
-    addElement('img', 'tablet-bg.jpg');
+    addElement('animation');
 
     return;
   }
