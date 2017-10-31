@@ -21,6 +21,7 @@ const headerElement = $('.header-background');
 let headline;
 let caption;
 let parent;
+let video;
 let image;
 let p;
 
@@ -33,19 +34,6 @@ function addElement(element, src, elmClass, title, content) {
         'background-position': 'center',
         'background-size': 'cover'
       });
-
-    return;
-  }
-
-  if (element === 'video') {
-    $(headerElement).append($('<video></video>')
-      .addClass(elmClass || '')
-      .attr({
-        src: require('./src/images/' + src),
-        autoplay: true,
-        loop: true,
-        muted: true
-      }));
 
     return;
   }
@@ -85,30 +73,38 @@ function addElement(element, src, elmClass, title, content) {
   }
 /////////////////////////////////////////banner-img
   if (element === 'banner-slide' && elmClass) {
-    parent = $('<li></li>').addClass('banner-carousel-item');
-    caption = $('<div></div>').addClass(`banner-regular-caption ${elmClass}`);
-    headline = $('<h3></h3>').addClass('banner-light').html(title);
-    p = $('<h5></h5>').addClass('banner-light banner-grey-text banner-text-lighten-2').html(content);
+    const carousel = $('#header-banner');
+
+    parent = $('<li></li>').addClass('carousel-item');
+
+    video = $('<video></video>').addClass('video-background')
+    .attr({
+      src: require('./src/images/' + src),
+      autoplay: true,
+      loop: true,
+      muted: true
+    });
+
     image = $('<div></div>')
       .addClass('banner-slide-mask')
       .css({
         'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(' + require('./src/images/' + src) +')',
-        'background-position': '-90%',
+        'background-position': 'center',
         'background-size': 'cover',
         'width': '100%',
       });
-      
-    caption.append(headline);
-    caption.append(p);
-    parent.append(caption);
-    parent.append(image);
-    parent.appendTo('.header-background');
+
+    if (elmClass === 'video') {
+      parent.append(video);
+      carousel.append(parent);
+    }
+
+    if (elmClass === 'image') {
+      parent.append(image);
+      carousel.append(parent);
+    }
   }
 }
-
-
-
-
 
 function renderElement(priority) {
   const { width } = screen;
@@ -139,7 +135,8 @@ $(window).resize(() => {
   renderElement();
 });
 
-addElement('banner-slide', 'promo.svg', 'left-caption', 'Promoção.', 'll');
+addElement('banner-slide', 'promo.svg', 'image', 'Promoção.', 'll');
+addElement('banner-slide', 'video.mp4', 'video');
 addElement('slide', 'main-car-slide.png', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
 addElement('slide', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');
 addElement('slide', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a iginção do seu veículo for ativida.');

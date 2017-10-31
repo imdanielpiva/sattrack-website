@@ -171,7 +171,7 @@ function isVehicleVisible() {
 
       $('.carousel').Carousel('autoplay', {
         enabled: true,
-        speed: 7000
+        speed: 30000
       });
     });
 
