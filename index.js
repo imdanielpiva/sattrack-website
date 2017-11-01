@@ -5,6 +5,7 @@ import './src/js/initial';
 import './src/js/jquery.easing.1.4';
 import './src/js/animation';
 import './src/js/velocity.min';
+import './src/js/velocity.ui';
 import './src/js/hammer.min';
 import './src/js/jquery.hammer';
 import './src/js/global';
@@ -15,16 +16,15 @@ import './src/js/isOnScreen';
 import './src/js/carousel';
 import './src/js/scrollIt';
 import './src/js/init';
-import './src/js/modal';
+import './src/js/place-icons-animation';
 
 const velAnimation = require('./src/js/place-icons-animation');
+const velAnimationMobile = require('./src/js/place-icons-animation-mobile');
 const headerElement = $('.header-background');
-const containerElement = $("#container");
 let parent;
 let caption;
 let headline;
-let caption;
-let parent;
+let animation;
 let video;
 let image;
 let p;
@@ -42,21 +42,8 @@ function addElement(element, src, elmClass, title, content) {
     return;
   }
 
-  if (element === 'animation') {
-      velAnimation.animateDots();
-      return;
-  }
-
-  if (element === 'video') {
-    $(headerElement).append($('<video></video>')
-      .addClass(elmClass || '')
-      .attr({
-        src: require('./src/images/' + src),
-        autoplay: true,
-        loop: true,
-        muted: true
-      }));
-
+  if (element === 'animation-mobile') {
+    velAnimationMobile.animateDots();
     return;
   }
 
@@ -93,35 +80,58 @@ function addElement(element, src, elmClass, title, content) {
       $('.right-slide').append(parent);
     }
   }
-/////////////////////////////////////////banner-img
+
   if (element === 'banner-slide' && elmClass) {
     const carousel = $('#header-banner');
+    const section = $('.section .pb-72');
 
     parent = $('<li></li>').addClass('carousel-item');
-
+    caption = $('<div></div>').addClass(`banner-regular-caption ${elmClass}`);
+    headline = $('<h3></h3>').addClass('banner-light').html(title);
+    p = $('<h5></h5>').addClass('banner-light banner-grey-text banner-text-lighten-2').html(content);
+    animation =  velAnimation.animateDots();
     video = $('<video></video>').addClass('video-background')
-    .attr({
-      src: require('./src/images/' + src),
-      autoplay: true,
-      loop: true,
-      muted: true
-    });
-
-    image = $('<div></div>')
-      .addClass('banner-slide-mask')
+      .attr({
+        src: require('./src/images/' + src),
+        autoplay: true,
+        loop: true,
+        muted: true
+      }).css({
+          'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(' + require('./src/images/' + src) +')',
+          'background-position': 'center',
+          'background-size': 'cover',
+          'height': '94vh',
+          'margin-top': '-316px'
+        });
+    image = $('<div></div>').addClass('banner-slide-mask')
       .css({
         'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(' + require('./src/images/' + src) +')',
         'background-position': 'center',
         'background-size': 'cover',
-        'width': '100%',
+        'width': '100%'
       });
 
-    if (elmClass === 'video') {
+    if (elmClass === 'video') {  
+      caption.append(headline);
+      caption.append(p);
+      parent.append(caption);
       parent.append(video);
       carousel.append(parent);
     }
 
+    if (elmClass === 'animation') {
+      parent.append(animation)  
+      .css({
+        'background': 'linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + require('./src/images/' + src) +')'
+      });
+      carousel.append(parent);
+      section.removeClass();
+    }
+
     if (elmClass === 'image') {
+      caption.append(headline);
+      caption.append(p);
+      parent.append(caption);
       parent.append(image);
       carousel.append(parent);
     }
@@ -138,7 +148,7 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
-    addElement('animation');
+    addElement('animation-mobile', 'foto-desktop.jpg');
 
     return;
   }
@@ -157,7 +167,8 @@ $(window).resize(() => {
   renderElement();
 });
 
-addElement('banner-slide', 'promo.svg', 'image', 'Promoção.', 'll');
+addElement('banner-slide', 'foto-desktop.jpg', 'animation');
+addElement('banner-slide', 'promo.svg', 'image');
 addElement('banner-slide', 'video.mp4', 'video');
 addElement('slide', 'main-car-slide.png', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
 addElement('slide', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');

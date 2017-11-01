@@ -157,8 +157,6 @@ function isVehicleVisible() {
         padding: 4,
         dist: 0
       });
-
-      $('.modal').modal();
       
       isVehicleVisible();
       $.scrollIt({

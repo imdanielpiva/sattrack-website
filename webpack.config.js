@@ -28,7 +28,7 @@ module.exports = {
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'modules'
     // }),
-    new UglifyJSPlugin()
+    // new UglifyJSPlugin()
   ],
   output: {
     path: path.resolve(__dirname, 'dist/'),
