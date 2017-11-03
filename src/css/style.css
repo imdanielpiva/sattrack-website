@@ -56,10 +56,13 @@ p {
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
-    top: -300px;
     background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
     width: 100%;
     height: 100vh;
+  }
+  .parallax-container .section {
+    width: 100%;
+    margin-top: -250px;
   }
 }
 
@@ -79,6 +82,10 @@ footer.page-footer {
 }
 
 #for-you {
+  margin-top: -15px;  
+}
+
+#banner-for-you {
   margin-top: -15px;  
 }
 
@@ -230,7 +237,7 @@ footer.page-footer {
 }
 
 .pb-72 {
-  padding:0 0 72px !important;
+  padding: 0 0 72px !important;
   z-index: 100 !important; 
 }
 
@@ -430,7 +437,6 @@ img.second-truck-tier {
   background-size: cover;
   width: 100%;
   height: 94vh;
-  margin-top: -250px;
 }
 
 .about-content p {
