@@ -6,7 +6,7 @@ function animateDots() {
 
 	for (var i = 0; i < 28; i++) {
 		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i)
-		.css({'width': '226px','height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
+		.css({'width': '226px', 'height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
 	}
 
 	var dot = { 

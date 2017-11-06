@@ -1,22 +1,14 @@
 export 
 function animateDots() {
-	$('<div></div>').attr('id', 'container').appendTo('#index-banner');
-	$('<img src="' + require('../images/foto-desktop.jpg') +'">').attr('id', 'img')
-	.css({ 
-		'width': '1920px', 
-		'height': '1330px',
-		'position': 'absolute',
-		'top': '-600px', 
-		'left': '-150px'
-	}).appendTo('#index-banner');
+	$('<div></div>').attr('id', 'container-mobile').appendTo($('.carousel-item'));
 
-	const $container = $("#container");
+	const $container = $("#container-mobile");
 
 	for (var i = 0; i < 28; i++) {
 		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i)
-		.css({'width': '226px','height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'})).appendTo('#index-banner');
+		.css({'width': '226px', 'height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
 	}
-
+	
 	var dot = { 
 			a: $('#dot0'),
 			b: $('#dot1'),
@@ -48,7 +40,7 @@ function animateDots() {
 			ab: $('#dot27')
 		}
 	
-	$container.css({'position': 'absolute', 'top': '-560px', 'z-index': '1', 'left': '-150px'});
+	$container.css({'position': 'absolute', 'top': '-525px', 'z-index': '1', 'left': '-70px'});
 	
 	const sequence1 = [
 		///////////////////////////////////////////Dots with animation////////////////////////////////////////////////
