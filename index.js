@@ -17,10 +17,8 @@ import './src/js/isOnScreen';
 import './src/js/carousel';
 import './src/js/scrollIt';
 import './src/js/init';
-import './src/js/place-icons-animation';
 import './src/js/place-icons-animation-mobile';
 
-const velAnimation = require('./src/js/place-icons-animation');
 const velAnimationMobile = require('./src/js/place-icons-animation-mobile');
 const headerElement = $('.header-background');
 let parent;
@@ -29,7 +27,6 @@ let caption;
 let btn;
 let headline;
 let animationMobile;
-let animation;
 let video;
 let image;
 let p;
@@ -77,13 +74,13 @@ function addElement(element, src, elmClass, title, content) {
 
   if (element === 'banner-slide' && elmClass) {
     const carousel = $('#header-banner');
+    const btn = $('#btn');
+    const section1 = $('#section1');
 
     parent = $('<li></li>').addClass('carousel-item');
     caption = $('<div></div>').addClass(`banner-regular-caption ${elmClass}`);
     headline = $('<h3></h3>').addClass('banner-light').html(title);
     p = $('<h5></h5>').addClass('banner-light banner-grey-text banner-text-lighten-2').html(content);
-    animation =  velAnimation.animateDots();
-    animationMobile = velAnimationMobile.animateDots();
     video = $('<video></video>').addClass('video-background')
       .attr({
         src: require('./src/images/' + src),
@@ -109,24 +106,8 @@ function addElement(element, src, elmClass, title, content) {
       carousel.append(parent);
     }
 
-    if (elmClass === 'animation') {
-      parent.append(animation)  
-      .css({
-        'background': 'linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + require('./src/images/' + src) +')'
-      });
-      carousel.append(parent);
-    }
-
-    if (elmClass === 'animationMobile') {
-      parent.append(animationMobile)  
-      .css({
-        'background': 'linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + require('./src/images/' + src) +')',
-        'background-position': '5% 90%'
-      });
-      carousel.append(parent);
-    }
-
     if (elmClass === 'image') {
+  
       parent.append(image);
       carousel.append(parent);
     }
@@ -135,12 +116,11 @@ function addElement(element, src, elmClass, title, content) {
   if (element === 'banner-slide-mobile' && elmClass) {
     const carousel = $('#header-banner');
     const modal = $('#modal');
+    // const btn = $('#btn');
     const section = $('#section');
     const section1 = $('#section1');
 
     parent = $('<li></li>').addClass('carousel-item');
-
-    animationMobile = velAnimationMobile.animateDots();
 
     image = $('<div></div>').addClass('banner-slide-mask')
       .css({
@@ -158,16 +138,7 @@ function addElement(element, src, elmClass, title, content) {
         'width': '100%'
       });
 
-    if (elmClass === 'animationMobile') {
-      parent.append(section1);
-      parent.append(animationMobile)
-      .css({
-        'background': 'linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + require('./src/images/' + src) +')',
-        'background-position': '5% 90%'
-      });
-      parent.append(modal);
-      carousel.append(parent);
-    }
+      animationMobile = velAnimationMobile.animateDots();
 
     if (elmClass === 'img') {
       parent.append(section);
@@ -175,8 +146,19 @@ function addElement(element, src, elmClass, title, content) {
       carousel.append(parent);
     }
 
+    if (elmClass === 'animationMobile') {
+      parent.append(section1);
+      parent.append(animationMobile)
+      .css({
+        'background': 'linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(' + require('./src/images/' + src) +')',
+        'background-position': '5% 90%'
+      });
+      carousel.append(parent);
+    }
+
     if (elmClass === 'image') {
       parent.append(image);
+      parent.append(modal);
       carousel.append(parent);
     }
   }
@@ -197,8 +179,8 @@ $(window).resize(() => {
 });
 
 if(!isMobile(navigator.userAgent || navigator.vendor || window.opera) === true) {
-  addElement('banner-slide', 'foto-desktop.jpg', 'animation');
   addElement('banner-slide', 'promo.svg', 'image');
+  addElement('banner-slide', 'rush.jpeg', 'image');
   addElement('banner-slide', 'video.mp4', 'video');
 }
 
