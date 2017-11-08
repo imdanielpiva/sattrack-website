@@ -11,8 +11,11 @@
   <div data-scroll-index="0" id="home" class="navbar-fixed">
     <nav class="white">
       <div class="nav-wrapper _nav-wrapper-container">
-        <a href="#!" class="brand-logo"><img src="images/logo.svg" /></a>
+        <a href="#!" class="brand-logo"><img src="images/logo.svg" id="img-logo"/></a>
         <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- <a href="../src/teste.html" class="btn btn-floating cyan pulse" id="btn-pulse">
+          <img style="margin-top: 5px;"  src="../src/images/favicon.png">
+        </a> -->
         <ul class="menu-ul hide-on-med-and-down">
           <li data-scroll-nav="0"><a>Início</a></li>
           <li data-scroll-nav="1"><a>Para Você</a></li>
@@ -21,6 +24,7 @@
           <li data-scroll-nav="4" class="contact"><a onclick="$zopim.livechat.window.toggle()">Contato</a></li>
           <li class="find-your-car"><a class="teal accent-4 btn waves-effect waves-light white-text">Localizar veículo</a></li>
           <li><a class="blue darken-4 btn waves-effect waves-light white-text ml-4-neg" href="http://telemetria.sattrack.com.br/">Telemetria</a></li>
+          
         </ul>
           
         <ul class="side-nav" id="mobile">
@@ -38,43 +42,27 @@
             
   <div class="parallax-container">
     <div id="header-banner" class="carousel carousel-slider" style="height: 94vh;">
-      <div class="carousel-fixed-item center">
-          <a href="../src/teste.html" class="btn waves-effect white grey-text darken-text-2" id="btn">LEIA O REGULAMENTODA PROMOÇÃO </a>
+      <!-- <div class="carousel-item">
+          <img src="../src/images/promo.svg">
+      </div> -->
+      <div class="section pb-72"> 
+        <div class="container">
+          <div class="row center">  
+            <h3 class="waves-effect white-text light">Nunca foi tão simples proteger seu veículo.</h3>
+            <h5 class="waves-effect white-text light">Oferecemos soluções incríveis de rastreamento e logística, confira!</h5>
+          </div>
+          <div class="row center"> 
+            <a href="http://sattrack.com.br/app/" id="download-button" class="btn-large waves-effect waves-light teal accent-4 white-text">Localizar meu veículo</a> 
+            <a href="http://telemetria.sattrack.com.br/" class="btn-large z-depth-1 waves-effect waves-light blue darken-4 mt-12">Telemetria</a> <br>
+            <a href="../src/teste.html" style="margin-top: 5px;" class="btn-large z-depth-1 waves-effect waves-light blue darken-4 mt-12 pulse">
+              <b style="color: #000;">Saiba da nossa promoção</b>
+            </a>
+          </div> 
+        </div> 
       </div>
-    </div>
-    </div>
-    <div class="section" id="modal"> 
-        <div class="container">
-          <div class="row center"> 
-            <a href="../src/teste.html" style="margin-top: 70px; margin-left: 200px;" class="btn-large z-depth-1 waves-effect waves-light blue darken-4 mt-12">Modal</a> 
-          </div> 
-        </div> 
-    </div>
-    <!-- <div class="section pb-72" id="section"> 
-        <div class="container">
-          <div class="row center">  
-            <h3 class="waves-effect white-text light">Nunca foi tão simples proteger seu veículo.</h3>
-            <h5 class="waves-effect white-text light">Oferecemos soluções incríveis de rastreamento e logística, confira!</h5>
-          </div>
-          <div class="row center"> 
-            <a href="http://sattrack.com.br/app/" id="download-button" class="btn-large waves-effect waves-light teal accent-4 white-text">Localizar meu veículo</a> 
-            <a href="http://telemetria.sattrack.com.br/" class="btn-large z-depth-1 waves-effect waves-light blue darken-4 mt-12">Telemetria</a> 
-          </div> 
-        </div> 
-    </div>
-    <div class="section pb-72" id="section1"> 
-        <div class="container">
-          <div class="row center">  
-            <h3 class="waves-effect white-text light">Nunca foi tão simples proteger seu veículo.</h3>
-            <h5 class="waves-effect white-text light">Oferecemos soluções incríveis de rastreamento e logística, confira!</h5>
-          </div>
-          <div class="row center"> 
-            <a href="http://sattrack.com.br/app/" id="download-button" class="btn-large waves-effect waves-light teal accent-4 white-text">Localizar meu veículo</a> 
-            <a href="http://telemetria.sattrack.com.br/" class="btn-large z-depth-1 waves-effect waves-light blue darken-4 mt-12">Telemetria</a> 
-          </div> 
-        </div> 
-    </div> -->
 
+    </div>
+    </div>
   <div class="section">
     <div id="for-you" data-scroll-index="1" class="_container flex">
       <div class="full-width-slide valign-wrapper">

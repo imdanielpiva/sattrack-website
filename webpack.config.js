@@ -16,7 +16,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './src/images/favicon.png',
-      hash: true,
+      hash: true
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -72,7 +72,7 @@ module.exports = {
                   path: 'postcss.config.js'
                 }
               }
-            },
+            }
           ]
         })
       },
