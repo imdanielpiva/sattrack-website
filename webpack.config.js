@@ -28,7 +28,7 @@ module.exports = {
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'modules'
     // })
-    // new UglifyJSPlugin()
+    new UglifyJSPlugin()
   ],
   output: {
     path: path.resolve(__dirname, 'dist/'),
@@ -47,9 +47,9 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              minimize: false,
-              removeComments: false,
-              collapseWhitespace: false
+              minimize: true,
+              removeComments: true,
+              collapseWhitespace: true
             }
           }
         ]
@@ -62,7 +62,7 @@ module.exports = {
             {
               loader: "css-loader",
               options: {
-                minimize: false 
+                minimize: true 
               }
             }
           ]
