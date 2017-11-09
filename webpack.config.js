@@ -27,7 +27,7 @@ module.exports = {
     new ExtractTextPlugin("styles.css"),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'modules'
-    // }),
+    // })
     // new UglifyJSPlugin()
   ],
   output: {
