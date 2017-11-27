@@ -157,6 +157,8 @@ function isVehicleVisible() {
         padding: 4,
         dist: 0
       });
+
+      $('.modal').modal();
       
       isVehicleVisible();
       $.scrollIt({
@@ -183,7 +185,7 @@ function isVehicleVisible() {
     });
 
     $('.find-your-car').click(() => {
-      if (isMobile(navigator.userAgent || navigator.vendor || window.opera) === true) window.location = 'http://app.sattrack.com.br/'
+      if (isMobile(navigator.userAgent || navigator.vendor || window.opera) === true) window.location = 'https://app.sattrack.com.br/'
       else window.location = 'http://sattrack.com.br/app'
     });
 
