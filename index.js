@@ -17,6 +17,7 @@ import './src/js/carousel';
 import './src/js/scrollIt';
 import './src/js/init';
 import './src/js/modal';
+import './src/js/slick.min.js';
 import './src/js/place-icons-animation';
 
 const velAnimation = require('./src/js/place-icons-animation');
@@ -105,6 +106,7 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
+    // addElement('img', 'app-01.png', 'img-app');
     addElement('animation');
 
     return;
@@ -134,3 +136,5 @@ addElement('slide', 'truck-slide-1.jpg', 'right-caption', 'Bloqueio imediato.', 
 require('./src/css/materialize.min.css');
 require('./src/fonts/icons/material-icons.css');
 require('./src/css/style.css');
+require('./src/css/slick-theme.css');
+require('./src/css/slick.css');
