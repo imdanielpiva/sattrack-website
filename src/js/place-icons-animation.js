@@ -1,12 +1,12 @@
 export 
 function animateDots() {
-	$('<div></div>').attr('id', 'container').appendTo($('#index-banner'));
-	$('<img src="' + require('../images/foto-desktop.jpg') +'">').attr('id', 'img').css({ 'width': '1920px', 'height': '1330px','position': 'absolute','top': '-600px', 'left': '-150px'}).appendTo('#index-banner');
+	$('<div></div>').attr('id', 'container').appendTo($('#teste'));
+	$('<img src="' + require('../images/foto-desktop.jpg') +'">').attr('id', 'img').css({ 'width': '1920px', 'height': '1330px','position': 'absolute','top': '-600px', 'left': '-150px'}).appendTo('#teste');
 
 	const $container = $("#container");
 
 	for (var i = 0; i < 28; i++) {
-		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({'width': '226px','height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
+		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({'width': '226px','height': '295px', 'z-index': '500', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
 	}
 
 	var dot = { 

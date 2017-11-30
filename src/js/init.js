@@ -160,37 +160,11 @@ function isVehicleVisible() {
 
       $('.modal').modal();
 
-      // $('.fade').slick({
-      //   dots: true,
-      //   infinite: true,
-      //   speed: 500,
-      //   fade: true,
-      //   autoplay: true,
-      //   adaptiveHeight: true,
-      //   responsive: [
-      //     {
-      //       breakpoint: 768,
-      //       settings: {
-      //         arrows: true,
-      //         centerMode: true,
-      //         centerPadding: '40px',
-      //         slidesToShow: 3
-      //       }
-      //     },
-      //     {
-      //       breakpoint: 480,
-      //       settings: {
-      //         arrows: true,
-      //         centerMode: true,
-      //         centerPadding: '40px',
-      //         slidesToShow: 1
-      //       }
-      //     }
-      //   ],
-      //   autoplaySpeed: 30000,
-      //   cssEase: 'linear'
-      // });
-      $('.single-item').slick();
+      $('.single-item').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 10000
+      });
       
       isVehicleVisible();
       $.scrollIt({

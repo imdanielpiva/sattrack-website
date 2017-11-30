@@ -3,12 +3,19 @@
   #promo-desk {
     display: none;
   }
+  #app-01 {
+    display: none;
+  }
+  #app-02 {
+    display: none;
+  }
   .mobile-corner-ribbon {
     width: 200px;
     background: #e43;
     top: 25px;
     left: -50px;
     text-align: center;
+    z-index: 800;
     line-height: 50px;
     letter-spacing: 1px;
     color: #f0f0f0;
@@ -27,6 +34,81 @@
   }
   .mobile-corner-ribbon.mobile-sticky{
     position: fixed;
+  }
+} 
+
+@media only screen and (min-width: 1470px) and (max-width: 1550px) {
+  #app-01 {
+    margin-top: 14%;
+    margin-left: 40%;
+    width: 22%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 14%;
+    margin-left: 65%;
+    width: 22%;
+    z-index: 1;
+  }
+} 
+
+@media only screen and (min-width: 1300px) and (max-width: 1470px) {
+  #app-01 {
+    margin-top: 17%;
+    margin-left: 40%;
+    width: 22%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 17%;
+    margin-left: 65%;
+    width: 22%;
+    z-index: 1;
+  }
+} 
+
+@media only screen and (min-width: 993px) and (max-width: 1299px) {
+  #app-01 {
+    margin-top: 28%;
+    margin-left: 36%;
+    width: 30%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 28%;
+    margin-left: 67%;
+    width: 30%;
+    z-index: 1;
+  }
+} 
+
+@media only screen and (min-width: 1300px) and (max-width: 1549px) {
+  #app-01 {
+    margin-top: 17%;
+    margin-left: 40%;
+    width: 22%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 17%;
+    margin-left: 65%;
+    width: 22%;
+    z-index: 1;
+  }
+} 
+
+@media only screen and (min-width: 1551px) and (max-width: 1999px) {
+  #app-01 {
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 21%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 16%;
+    margin-left: 65%;
+    width: 22%;
+    z-index: 1;
   }
 } 
 
@@ -94,6 +176,7 @@ p {
 }
 
 .parallax-container .section {
+  margin-top: 19%;
   width: 100%;
   z-index: 1;
 }
@@ -107,8 +190,20 @@ p {
 }   
 
 @media only screen and (max-width : 992px) {
+  #app-01 {
+    margin-top: 32%;
+    margin-left: 36%;
+    width: 30%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 32%;
+    margin-left: 67%;
+    width: 30%;
+    z-index: 1;
+  }
   .parallax-container .section {
-    position: absolute;
+    /* position: absolute; */
     top: 40%;
   }
   #index-banner .section {
@@ -126,6 +221,19 @@ p {
     width: 100%;
     height: 100vh;
   }
+  #mob {
+    margin-top: -90px;
+  }
+  #app-01 {
+    margin-top: 90%;
+    width: 50%;
+    margin-left: 10px;
+  }
+  #app-02 {
+    margin-top: 90%;
+    width: 60%;
+    margin-left: 51%;
+  }
   #index-banner .header-background {
     background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65));
     z-index: 1;
@@ -141,10 +249,6 @@ p {
 
 footer.page-footer {
   margin: 0;
-}
-
-#index-banner {
-  padding: 16% 0 0;
 }
 
 #for-you {
@@ -172,13 +276,6 @@ footer.page-footer {
   display: none;
 }
 
-.img-app {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  -webkit-filter: brightness(35%); 
-}
-
 .video-background {
   width: 100%;
   height: 100%;
@@ -193,6 +290,18 @@ footer.page-footer {
 }
 
 @media only screen and (max-width : 768px) and (min-width: 501px)  {
+  #app-01 {
+    margin-top: 60%;
+    margin-left: 16%;
+    width: 35%;
+    z-index: 1;
+  }
+  #app-02 {
+    margin-top: 60%;
+    margin-left: 56%;
+    width: 35%;
+    z-index: 1;
+  }
   .header-background {
      height: 100vh;
      background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url(../images/fallback.png);

@@ -106,7 +106,6 @@ function renderElement(priority) {
   }
 
   if (width <= 500) {
-    // addElement('img', 'app-01.png', 'img-app');
     addElement('animation');
 
     return;
