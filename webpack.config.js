@@ -6,17 +6,39 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 module.exports = {
   entry: {
     index: './index',
     // modules: './src/js/module'
   },
+  output: {
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: "/dist/",
+    filename: 'js/[name].[hash].bundle.js'
+  },
   plugins: [
     new CleanWebpackPlugin('./dist'),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      chunks: ['index'],
       favicon: './src/images/favicon.png',
       hash: true,
+      filename: path.resolve(__dirname, 'dist/index.html')
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/app-android.html',
+      chunks: ['index'],
+      favicon: './src/images/favicon.png',
+      hash: true,
+      filename: path.resolve(__dirname, 'dist/app-android.html')
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/app-ios.html',
+      chunks: ['index'],
+      favicon: './src/images/favicon.png',
+      hash: true,
+      filename: path.resolve(__dirname, 'dist/app-ios.html')
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -30,10 +52,6 @@ module.exports = {
     // })
     // new UglifyJSPlugin()
   ],
-  output: {
-    path: path.resolve(__dirname, 'dist/'),
-    filename: 'js/[hash].bundle.js'
-  },
   module: {
     rules: [
       {

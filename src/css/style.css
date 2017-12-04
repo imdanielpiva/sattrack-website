@@ -38,6 +38,13 @@
 } 
 
 @media only screen and (min-width: 1470px) and (max-width: 1550px) {
+  #back {
+    height: 25vh;
+  }
+  #lg-app {
+    margin-top: -25%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 14%;
     margin-left: 40%;
@@ -53,6 +60,13 @@
 } 
 
 @media only screen and (min-width: 1300px) and (max-width: 1470px) {
+  #back {
+    height: 40vh;
+  }
+  #lg-app {
+    margin-top: -25%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 17%;
     margin-left: 40%;
@@ -68,6 +82,13 @@
 } 
 
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
+  #back {
+    height: 25vh;
+  }
+  #lg-app {
+    margin-top: -24%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 28%;
     margin-left: 36%;
@@ -83,6 +104,10 @@
 } 
 
 @media only screen and (min-width: 1300px) and (max-width: 1549px) {
+  #lg-app {
+    margin-top: -25%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 17%;
     margin-left: 40%;
@@ -97,7 +122,14 @@
   }
 } 
 
-@media only screen and (min-width: 1551px) and (max-width: 1999px) {
+@media only screen and (min-width: 1512px) and (max-width: 1999px) {
+  #back {
+    height: 40vh;
+  }
+  #lg-app {
+    margin-top: -25%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 15%;
     margin-left: 35%;
@@ -176,20 +208,34 @@ p {
 }
 
 .parallax-container .section {
-  margin-top: 19%;
+  /* margin-top: 19%; */
   width: 100%;
   z-index: 1;
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1510px) {
+@media only screen and (min-width: 993px) and (max-width: 1510px) {
+  #back {
+    height: 35vh;
+  }
   .right {
     margin-left: 20px; 
     min-height: 56px;
     height: auto;
   }
+  #lg-app {
+    margin-top: -26%;
+    width: 100%;
+  }
 }   
 
 @media only screen and (max-width : 992px) {
+  #back {
+    height: 25vh;
+  }
+  #lg-app {
+    margin-top: -240px;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 32%;
     margin-left: 36%;
@@ -215,14 +261,18 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
+  #back {
+    height: 25vh;
+  }
   #index-banner .section {
     top: 0;
     background: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));
     width: 100%;
     height: 100vh;
   }
-  #mob {
-    margin-top: -90px;
+  #lg-app {
+    margin-top: -10%;
+    width: 100%;
   }
   #app-01 {
     margin-top: 90%;
@@ -289,7 +339,24 @@ footer.page-footer {
   background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url(../images/fallback.png);
 }
 
+@media only screen and (min-width: 777px) and (max-width: 991px) {
+  #back {
+    height: 27vh;
+  }
+  #lg-app {
+    margin-top: -23%;
+    width: 100%;
+  }
+}  
+
 @media only screen and (max-width : 768px) and (min-width: 501px)  {
+  #back {
+    height: 25vh;
+  }
+  #lg-app {
+    margin-top: -22%;
+    width: 100%;
+  }
   #app-01 {
     margin-top: 60%;
     margin-left: 16%;
