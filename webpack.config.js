@@ -6,15 +6,15 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 module.exports = {
   entry: {
     index: './index',
+    appIndex: './appIndex'
     // modules: './src/js/module'
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: "/dist/",
+    publicPath: "/",
     filename: 'js/[name].[hash].bundle.js'
   },
   plugins: [
@@ -28,14 +28,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/app-android.html',
-      chunks: ['index'],
+      chunks: ['appIndex'],
       favicon: './src/images/favicon.png',
       hash: true,
       filename: path.resolve(__dirname, 'dist/app-android.html')
     }),
     new HtmlWebpackPlugin({
       template: './src/app-ios.html',
-      chunks: ['index'],
+      chunks: ['appIndex'],
       favicon: './src/images/favicon.png',
       hash: true,
       filename: path.resolve(__dirname, 'dist/app-ios.html')
