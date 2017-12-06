@@ -146,6 +146,9 @@
 
 /* The ribbons */
 @media only screen and (min-width: 601px) and (max-width: 2000px) {
+  #video-android {
+    width: 589px;
+  }
   #promo-mobile {
     display: none;
   }
@@ -261,6 +264,9 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
+  #video-android {
+    width: 100%;
+  }
   #back {
     height: 25vh;
   }

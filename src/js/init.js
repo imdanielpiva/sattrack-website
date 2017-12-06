@@ -163,7 +163,7 @@ function isVehicleVisible() {
       $('.single-item').slick({
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 10000
+        autoplaySpeed: 5000
       });
       
       isVehicleVisible();
