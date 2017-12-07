@@ -264,6 +264,9 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
+	#last-carousel {
+		margin-top: -16%;
+	}
   #video-android {
     width: 100%;
   }

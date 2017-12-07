@@ -161,10 +161,21 @@ function isVehicleVisible() {
       $('.modal').modal();
 
       $('.single-item').slick({
-        arrows: false,
+				arrows: false,
+				// infinite: true,
         autoplay: true,
         autoplaySpeed: 5000
-      });
+			});
+			
+			$('.single-item-rtl').slick({
+				arrows: false,
+				// infinite: true,
+        autoplay: true,
+				autoplaySpeed: 5000,
+				dots: true,
+				rtl: false
+			});
+				
       
       isVehicleVisible();
       $.scrollIt({

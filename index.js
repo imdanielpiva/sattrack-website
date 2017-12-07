@@ -19,6 +19,7 @@ import './src/js/init';
 import './src/js/modal';
 import './src/js/slick.min.js';
 import './src/js/place-icons-animation';
+import { height } from 'window-size';
 
 const velAnimation = require('./src/js/place-icons-animation');
 const headerElement = $('.header-background');
@@ -60,36 +61,26 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'slide' && elmClass) {
-    parent = $('<li></li>').addClass('carousel-item');
+		parent = $('<div></div>').css({ 'background': 'url(' + require('./src/images/' + src) +')', 'width': '100vw', 
+		'height': '100vh', 'background-size': 'cover', 'position': 'sticky',
+		 'z-index': '-1' });
+		 
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
     headline = $('<h3></h3>').addClass('light').html(title);
     p = $('<h5></h5>').addClass('light grey-text text-lighten-2').html(content);
-    image = $('<div></div>')
-      .addClass('slide-mask')
-      .css({
-        background: 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(' + require('./src/images/' + src) +')',
-        'background-position': '50%',
-        'background-size': 'cover',
-        width: '100%',
-        height: '100%',
-        position: 'sticky',
-        bottom: '0',
-        'z-index': '-1'
-      });
 
     caption.append(headline);
     caption.append(p);
     parent.append(caption);
-    parent.append(image);
 
     if (elmClass === 'left-caption') {
-      $('.left-slide').append(parent);
+      $('.single-item-rtl').append(parent);
       
       return;
     }
 
     if (elmClass === 'right-caption') {
-      $('.right-slide').append(parent);
+      $('.single-item-rtl').append(parent);
     }
   }
 }
