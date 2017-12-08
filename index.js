@@ -61,7 +61,7 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'slide' && elmClass) {
-		parent = $('<div></div>').css({ 'background': 'url(' + require('./src/images/' + src) +')', 'width': '100vw', 
+		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 
 		'height': '100vh', 'background-size': 'cover', 'position': 'sticky',
 		 'z-index': '-1' });
 		 

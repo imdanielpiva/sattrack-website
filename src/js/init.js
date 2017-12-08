@@ -164,18 +164,16 @@ function isVehicleVisible() {
 				arrows: false,
 				// infinite: true,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 10000
 			});
 			
 			$('.single-item-rtl').slick({
 				arrows: false,
-				// infinite: true,
         autoplay: true,
-				autoplaySpeed: 5000,
-				dots: true,
+				autoplaySpeed: 10000,
+				dots: false,
 				rtl: false
 			});
-				
       
       isVehicleVisible();
       $.scrollIt({

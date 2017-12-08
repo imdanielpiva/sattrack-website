@@ -1,5 +1,8 @@
 /* The ribbons */
 @media only screen and (max-width: 600px) {
+	#space {
+		margin-top: -7%;
+	}
   #promo-desk {
     display: none;
   }
@@ -264,8 +267,12 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
+	#space {
+		margin-top: -7%;
+	}
 	#last-carousel {
-		margin-top: -16%;
+		margin-top: -10%;
+		height: 100vh;
 	}
   #video-android {
     width: 100%;
