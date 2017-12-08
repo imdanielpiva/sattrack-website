@@ -162,9 +162,9 @@ function isVehicleVisible() {
 
       $('.single-item').slick({
 				arrows: false,
-				// infinite: true,
-        autoplay: true,
-        autoplaySpeed: 10000
+				infinite: true,
+				autoplay: true,
+        autoplaySpeed: 3000
 			});
 			
 			$('.single-item-rtl').slick({
