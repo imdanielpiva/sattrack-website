@@ -60,9 +60,9 @@ function addElement(element, src, elmClass, title, content) {
     return;
   }
 
-  if (element === 'slide' && elmClass) {
+  if (element === 'slide-left' && elmClass) {
 		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 
-		'height': '100vh', 'background-size': 'cover', 'position': 'sticky',
+		'height': '100vh', 'min-height': '600px', 'background-size': 'cover', 'position': 'sticky',
 		 'z-index': '-1' });
 		 
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
@@ -74,13 +74,26 @@ function addElement(element, src, elmClass, title, content) {
     parent.append(caption);
 
     if (elmClass === 'left-caption') {
-      $('.single-item-rtl').append(parent);
+      $('.single-item-rtl-1').append(parent);
       
       return;
     }
+	}
+	
+	if (element === 'slide-right' && elmClass) {
+		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 'background-size': 'cover', 'position': 'sticky',
+		 'z-index': '-1', 'min-height': '600px' });
+		 
+    caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
+    headline = $('<h3></h3>').addClass('light').html(title);
+    p = $('<h5></h5>').addClass('light grey-text text-lighten-2').html(content);
+
+    caption.append(headline);
+    caption.append(p);
+    parent.append(caption);
 
     if (elmClass === 'right-caption') {
-      $('.single-item-rtl').append(parent);
+      $('.single-item-rtl-2').append(parent);
     }
   }
 }
@@ -115,12 +128,12 @@ $(window).resize(() => {
   renderElement();
 });
 
-addElement('slide', 'main-car-slide.png', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
-addElement('slide', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');
-addElement('slide', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a iginção do seu veículo for ativida.');
-addElement('slide', 'truck-slide-5.jpg', 'right-caption', 'Controle total da sua frota.', 'Com a tecnologia de telemetria de dados da Sattrack, as informações coletadas dos veículos são analisadas em dados, com isso é possível acompanhar o comportamento do motorista ao volante, identificando infrações que aumentam o risco de acidente, desperdiço de combustível e redução da disponibilidade da frota.');
-addElement('slide', 'truck-slide-3.jpg', 'right-caption', 'Analise sua frota.', 'Saiba das informações detalhadamente, como tempo de utilização do veículo, velocidade média e máxima, distância percorrida, ponto inicial e ponto final com histórico de até 6 meses.');
-addElement('slide', 'truck-slide-1.jpg', 'right-caption', 'Bloqueio imediato.', 'Em caso de roubo ou circunstâncias que podem colocar seu veículo em perigo, baster pedir o bloqueio imediato do veículo.');
+addElement('slide-left', 'main-car-slide.png', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
+addElement('slide-left', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');
+addElement('slide-left', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a iginção do seu veículo for ativida.');
+addElement('slide-right', 'truck-slide-5.jpg', 'right-caption', 'Controle total da sua frota.', 'Com a tecnologia de telemetria de dados da Sattrack, as informações coletadas dos veículos são analisadas em dados, com isso é possível acompanhar o comportamento do motorista ao volante, identificando infrações que aumentam o risco de acidente, desperdiço de combustível e redução da disponibilidade da frota.');
+addElement('slide-right', 'truck-slide-3.jpg', 'right-caption', 'Analise sua frota.', 'Saiba das informações detalhadamente, como tempo de utilização do veículo, velocidade média e máxima, distância percorrida, ponto inicial e ponto final com histórico de até 6 meses.');
+addElement('slide-right', 'truck-slide-1.jpg', 'right-caption', 'Bloqueio imediato.', 'Em caso de roubo ou circunstâncias que podem colocar seu veículo em perigo, baster pedir o bloqueio imediato do veículo.');
 
 // stuffs.css
 require('./src/css/materialize.min.css');

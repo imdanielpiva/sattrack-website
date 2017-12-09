@@ -164,10 +164,18 @@ function isVehicleVisible() {
 				arrows: false,
 				infinite: true,
 				autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 30000
 			});
 			
-			$('.single-item-rtl').slick({
+			$('.single-item-rtl-1').slick({
+				arrows: false,
+        autoplay: true,
+				autoplaySpeed: 10000,
+				dots: false,
+				rtl: false
+			});
+
+			$('.single-item-rtl-2').slick({
 				arrows: false,
         autoplay: true,
 				autoplaySpeed: 10000,
