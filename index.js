@@ -62,7 +62,7 @@ function addElement(element, src, elmClass, title, content) {
 
   if (element === 'slide-left' && elmClass) {
 		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 
-		'height': '100vh', 'min-height': '600px', 'background-size': 'cover', 'position': 'sticky',
+		'height': '94vh', 'min-height': '568px', 'background-size': 'cover', 'position': 'sticky',
 		 'z-index': '-1' });
 		 
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
@@ -82,7 +82,7 @@ function addElement(element, src, elmClass, title, content) {
 	
 	if (element === 'slide-right' && elmClass) {
 		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 'background-size': 'cover', 'position': 'sticky',
-		 'z-index': '-1', 'min-height': '600px' });
+		 'z-index': '-1', 'height': '100vh' , 'min-height': '568px' });
 		 
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
     headline = $('<h3></h3>').addClass('light').html(title);

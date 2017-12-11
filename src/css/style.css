@@ -1,10 +1,13 @@
 /* The ribbons */
 @media only screen and (max-width: 600px) {
+	#left-css {
+		margin-top: 15%;
+	}
+	#right-css {
+		margin-top: -4%;
+	}
 	#tec {
 		display: none;
-	}
-	#space {
-		margin-top: -14%;
 	}
   #promo-desk {
     display: none;
@@ -44,9 +47,6 @@
 } 
 
 @media only screen and (min-width: 1470px) and (max-width: 1550px) {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 25vh;
   }
@@ -69,9 +69,6 @@
 } 
 
 @media only screen and (min-width: 1300px) and (max-width: 1470px) {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 40vh;
   }
@@ -94,9 +91,6 @@
 } 
 
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 25vh;
   }
@@ -119,9 +113,6 @@
 } 
 
 @media only screen and (min-width: 1300px) and (max-width: 1549px) {
-	#tec-2 {
-		display: none;
-	}
   #lg-app {
     margin-top: -25%;
     width: 100%;
@@ -203,9 +194,26 @@ body {
   user-select: none;
 }
 
+#teste {
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60));
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
+}
+
+.waves-effect-custom {
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+	-webkit-tap-highlight-color: transparent;
+	vertical-align: middle;
+	z-index: 1;
 }
 
 p {
@@ -235,9 +243,6 @@ p {
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1510px) {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 35vh;
   }
@@ -250,18 +255,9 @@ p {
     margin-top: -26%;
     width: 100%;
   }
-}  
-
-@media only screen and (min-width: 1550px) and (max-width: 1830px) {
-	#tec-2 {
-		display: none;
-	}
 }   
 
 @media only screen and (max-width : 992px) {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 25vh;
   }
@@ -296,9 +292,6 @@ p {
 @media only screen and (max-width : 600px) {
 	#tec {
 		display: none;
-	}
-	#space {
-		margin-top: -14%;
 	}
 	#last-carousel {
 		margin-top: -10%;
@@ -396,9 +389,6 @@ footer.page-footer {
 }  
 
 @media only screen and (max-width : 768px) and (min-width: 501px)  {
-	#tec-2 {
-		display: none;
-	}
   #back {
     height: 25vh;
   }

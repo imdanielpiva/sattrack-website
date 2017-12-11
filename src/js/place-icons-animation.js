@@ -6,7 +6,7 @@ function animateDots() {
 	const $container = $("#container");
 
 	for (var i = 0; i < 28; i++) {
-		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({ 'z-index': '-1', 'width': '226px','height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
+		$container.append($('<div></div>').addClass('dot').attr('id', 'dot'+i).css({'width': '226px','height': '295px', 'background-image': 'url('+ require('../images/icone_Sat.png') +')'}));
 	}
 
 	var dot = { 
@@ -40,7 +40,7 @@ function animateDots() {
 			ab: $('#dot27')
 		}
 	
-	$container.css({'position': 'absolute', 'top': '-560px', 'z-index': '1', 'left': '-150px'});
+	$container.css({'position': 'absolute', 'top': '-560px', 'left': '-150px'});
 	
 	const sequence1 = [
 		///////////////////////////////////////////Dots with animation////////////////////////////////////////////////
