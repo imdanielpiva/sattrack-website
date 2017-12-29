@@ -23,13 +23,13 @@
 define('DB_NAME', 'sattrack');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'ruankenedi');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'ruankenedi0');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql785.umbler.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
