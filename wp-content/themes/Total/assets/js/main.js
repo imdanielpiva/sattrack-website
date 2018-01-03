@@ -1,8 +1,3 @@
-// class Form {
-// 	constructor() {
-// 		alert('Class Form');
-// 	}
-// }
-
-// new Form();
-require('./main.scss');
+require('../sass/main.scss');
+import images from './about.png';
+// require('../../functions.php');
