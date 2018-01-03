@@ -147,7 +147,7 @@ function isVehicleVisible() {
     $(document).ready(function () {
       if (screen.width < 950) {
         topOffset = -25;
-        
+
         $('#left-banner').removeClass('m-tb-16');
       }
 
@@ -156,9 +156,26 @@ function isVehicleVisible() {
         indicators: true,
         padding: 4,
         dist: 0
-      });
+			});
 
-      $('.modal').modal();
+			function loadPromotionModal() {
+				import('./modal.js');
+				import('./module/promotion.js');
+				console.log('oi loading modal');
+			}
+
+			$('.modal').modal();
+			
+			const desktopRibbon = $('#promo-desk');
+			const mobileRibbon = $('#promo-mobile');
+
+			if (desktopRibbon) {
+				desktopRibbon.click(loadPromotionModal);
+			} 
+
+			if (mobileRibbon) {
+				mobileRibbon.click(loadPromotionModal);
+			}
 
       $('.single-item').slick({
 				arrows: false,
