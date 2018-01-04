@@ -119,7 +119,7 @@ function renderElement(priority) {
     return;
   }
   if (width <= 768) {
-    addElement('animation');
+    addElement('video', 'video.mp4', 'video-background');
 
     return;
   }
