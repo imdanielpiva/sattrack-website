@@ -1,4 +1,5 @@
 // stuffs.js
+
 window.onload = renderElement('high');
 
 import './src/js/initial';
@@ -17,11 +18,12 @@ import './src/js/carousel';
 import './src/js/scrollIt';
 import './src/js/init';
 import './src/js/modal';
-import './src/js/slick.min.js';
+import './src/js/slick.min';
 import './src/js/place-icons-animation';
 import { height } from 'window-size';
 
 const velAnimation = require('./src/js/place-icons-animation');
+
 const headerElement = $('.header-background');
 let headline;
 let caption;
@@ -48,23 +50,25 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'video') {
-    $(headerElement).append($('<video></video>')
-      .addClass(elmClass || '')
-      .attr({
-        src: require('./src/images/' + src),
-        autoplay: true,
-        loop: true,
-        muted: true
-      }));
+		import('./src/images/' + src).then((videoPath) => {
+			$(headerElement).append($('<video></video>')
+				.addClass(elmClass || '')
+				.attr({
+					src: videoPath,
+					autoplay: true,
+					loop: true,
+					muted: true
+				}));
+		});
 
     return;
   }
 
   if (element === 'slide-left' && elmClass) {
-		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 
-		'height': '94vh', 'min-height': '568px', 'background-size': 'cover', 'position': 'sticky',
-		 'z-index': '-1' });
-		 
+    parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 
+    'height': '94vh', 'min-height': '568px', 'background-size': 'cover', 'position': 'sticky',
+    'z-index': '-1' });
+
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
     headline = $('<h3></h3>').addClass('light').html(title);
     p = $('<h5></h5>').addClass('light grey-text text-lighten-2').html(content);
@@ -75,15 +79,15 @@ function addElement(element, src, elmClass, title, content) {
 
     if (elmClass === 'left-caption') {
       $('.single-item-rtl-1').append(parent);
-      
-      return;
+
+       return;
     }
-	}
-	
-	if (element === 'slide-right' && elmClass) {
-		parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw', 'background-size': 'cover', 'position': 'sticky',
-		 'z-index': '-1', 'height': '100vh' , 'min-height': '568px' });
-		 
+  }
+
+  if (element === 'slide-right' && elmClass) {
+  parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100vw',         'background-size': 'cover', 'position': 'sticky',
+  'z-index': '-1', 'height': '100vh', 'min-height': '568px' });
+
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
     headline = $('<h3></h3>').addClass('light').html(title);
     p = $('<h5></h5>').addClass('light grey-text text-lighten-2').html(content);

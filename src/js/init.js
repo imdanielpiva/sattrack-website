@@ -159,12 +159,15 @@ function isVehicleVisible() {
 			});
 
 			function loadPromotionModal() {
-				import('./modal.js');
-				import('./module/promotion.js');
-				console.log('oi loading modal');
-			}
+				const modalEl = document.getElementById('modal1');
+						
+				if (!modalEl) {
+					import('./module/promotion.js');
+					return true;
+				}
 
-			$('.modal').modal();
+				$('#modal1').modal('open');
+			}
 			
 			const desktopRibbon = $('#promo-desk');
 			const mobileRibbon = $('#promo-mobile');
@@ -199,7 +202,7 @@ function isVehicleVisible() {
 				dots: false,
 				rtl: false
 			});
-      
+
       isVehicleVisible();
       $.scrollIt({
         easing: 'linear',

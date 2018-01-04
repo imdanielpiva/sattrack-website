@@ -1,5 +1,4 @@
 const path = require('path');
-const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -10,11 +9,10 @@ module.exports = {
   entry: {
     index: './index',
     appIndex: './appIndex'
-    // modules: './src/js/module'
   },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: "/",
+    publicPath: '/',
     filename: 'js/[name].[hash].bundle.js'
   },
   plugins: [
@@ -42,22 +40,19 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: "jquery",
+      jQuery: 'jquery',
       'window.jQuery': 'jquery',
       'window.$': 'jquery'
     }),
-    new ExtractTextPlugin("styles.css"),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'modules'
-    // })
-    // new UglifyJSPlugin()
+    new ExtractTextPlugin('styles.css'),
+    new UglifyJSPlugin()
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel-loader'
       },
       {
         test: /\.html$/,
@@ -65,9 +60,9 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              minimize: false,
-              removeComments: false,
-              collapseWhitespace: false
+              minimize: true,
+              removeComments: true,
+              collapseWhitespace: true
             }
           }
         ]
@@ -75,12 +70,12 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: 'style-loader',
           use: [
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
-                minimize: false 
+                minimize: true
               }
             }
           ]
@@ -92,9 +87,9 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[hash].[ext]',
-              outputPath: 'assets/',
-            }  
+						name: '[hash].[ext]',
+              outputPath: 'assets/'
+            }
           }
         ]
       }
