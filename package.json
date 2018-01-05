@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "jquery": "^3.2.1",
+    "postcss-discard-duplicates": "^2.1.0",
     "uglify-es": "github:mishoo/UglifyJS2#harmony"
   },
   "devDependencies": {

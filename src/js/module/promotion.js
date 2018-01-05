@@ -51,7 +51,7 @@
 
 	const titleOfHead = $("<h3>Show de Prêmios Sattrack</h3>\n");
 
-	const bannerOfPromotion = $('<img src="' + require('../../images/promo-min.png') + '">').css({ 'width': '100%' });
+	const bannerOfPromotion = $('<img src="' + require('../../images/test.jpg') + '">').css({ 'width': '100%' });
 
 	const textOfModal = $(`<p>${textOfPromotion}</p>`).css({ 'color': '#000',	'text-align': 'justify'	});
 

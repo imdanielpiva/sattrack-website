@@ -3172,7 +3172,7 @@ postcss-discard-comments@^2.0.4:
   dependencies:
     postcss "^5.0.14"
 
-postcss-discard-duplicates@^2.0.1:
+postcss-discard-duplicates@^2.0.1, postcss-discard-duplicates@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/postcss-discard-duplicates/-/postcss-discard-duplicates-2.1.0.tgz#b9abf27b88ac188158a5eb12abcae20263b91932"
   dependencies:

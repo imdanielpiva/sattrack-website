@@ -26,7 +26,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/app-android.html',
-      chunks: ['appIndex'],
+      chunk: ['appIndex'],
       favicon: './src/images/favicon.png',
       hash: true,
       filename: path.resolve(__dirname, 'dist/app-android.html')
