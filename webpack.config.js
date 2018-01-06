@@ -44,8 +44,8 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.$': 'jquery'
     }),
-    new ExtractTextPlugin('styles.css')
-    // new UglifyJSPlugin()
+    new ExtractTextPlugin('styles.css'),
+    new UglifyJSPlugin()
   ],
   module: {
     rules: [
@@ -60,9 +60,9 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              minimize: false,
-              removeComments: false,
-              collapseWhitespace: false
+              minimize: true,
+              removeComments: true,
+              collapseWhitespace: true
             }
           }
         ]
@@ -75,7 +75,7 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                minimize: false
+                minimize: true
               }
             }
           ]
