@@ -187,7 +187,7 @@ function isVehicleVisible() {
         autoplaySpeed: 30000
 			});
 			
-			$('.single-item-rtl-1').slick({
+			$('.single-item-rtl-1').attr('id', 'clip-left').slick({
 				arrows: false,
         autoplay: true,
 				autoplaySpeed: 10000,
@@ -195,7 +195,7 @@ function isVehicleVisible() {
 				rtl: false
 			});
 
-			$('.single-item-rtl-2').slick({
+			$('.single-item-rtl-2').attr('id', 'clip-right').slick({
 				arrows: false,
         autoplay: true,
 				autoplaySpeed: 10000,

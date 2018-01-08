@@ -6,12 +6,12 @@
 	#right-css {
 		margin-top: -4%;
 	}
+  #promo-desk {
+    display: none;
+	}
 	#tec {
 		display: none;
 	}
-  #promo-desk {
-    display: none;
-  }
   #app-01 {
     display: none;
   }
@@ -53,7 +53,13 @@
   #lg-app {
     margin-top: -25%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 14%;
     margin-left: 40%;
@@ -75,7 +81,13 @@
   #lg-app {
     margin-top: -25%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 17%;
     margin-left: 40%;
@@ -93,11 +105,20 @@
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   #back {
     height: 25vh;
-  }
+	}
+	#tec {
+		display: none;
+	}
   #lg-app {
     margin-top: -24%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 28%;
     margin-left: 36%;
@@ -116,7 +137,13 @@
   #lg-app {
     margin-top: -25%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 17%;
     margin-left: 40%;
@@ -138,7 +165,13 @@
   #lg-app {
     margin-top: -25%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 15%;
     margin-left: 35%;
@@ -263,8 +296,14 @@ p {
   }
   #lg-app {
     margin-top: -240px;
-    width: 100%;
-  }
+		width: 100%;
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 32%;
     margin-left: 36%;
@@ -290,9 +329,6 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
-	#tec {
-		display: none;
-	}
 	#last-carousel {
 		margin-top: -10%;
 		height: 100vh;
@@ -312,7 +348,13 @@ p {
   #lg-app {
     margin-top: -10%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 90%;
     width: 45%;
@@ -381,7 +423,10 @@ footer.page-footer {
 @media only screen and (min-width: 777px) and (max-width: 991px) {
   #back {
     height: 27vh;
-  }
+	}
+	#tec {
+		display: none;
+	}
   #lg-app {
     margin-top: -23%;
     width: 100%;
@@ -391,11 +436,20 @@ footer.page-footer {
 @media only screen and (max-width : 768px) and (min-width: 501px)  {
   #back {
     height: 25vh;
-  }
+	}
+	#tec {
+		display: none;
+	}
   #lg-app {
     margin-top: -22%;
     width: 100%;
-  }
+	}
+	#tec {
+		margin-top: 25%;
+		margin-left: 10%;
+		width: 25%;
+		z-index: 1;
+	}
   #app-01 {
     margin-top: 60%;
     margin-left: 16%;
@@ -846,26 +900,26 @@ img.second-truck-tier {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 2500px) {
+@media screen and (min-width: 1021px) and (max-width: 2500px) {
   #index-banner {
     padding: 12% 0 0;
   }
 
   .left-banner-slider {
-    width: 68.8%;
+		width: 62.5%;
   }
   
   .right-banner-slider {
     width: 73%;
-  }
+	}
 
-  .clip-path-left {
-    clip-path: polygon(0% -18%, 32% 100%, 100% 100%, 100% 0%);
-  }
-  
-  .clip-path-right {
-    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 62% 0%);
-  }
+	#clip-left .slick-list {
+		clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
+	}
+
+	#clip-right .slick-list {
+		clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 62% 0%);
+	}
 
   .left-caption {
     padding-left: 15% !important;

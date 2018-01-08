@@ -65,7 +65,7 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'slide-left' && elmClass) {
-    parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100%', 
+    parent = $('<div></div>').attr('id', 'oi').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100%', 
     'height': '94vh', 'min-height': '568px', 'background-size': 'cover', 'position': 'sticky',
     'z-index': '-1' });
 
@@ -85,7 +85,7 @@ function addElement(element, src, elmClass, title, content) {
   }
 
   if (element === 'slide-right' && elmClass) {
-  parent = $('<div></div>').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100%','background-size': 'cover', 'position': 'sticky',
+  parent = $('<div></div>').attr('id', 'clip-right').css({ 'background': 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url(' + require('./src/images/' + src) +')', 'width': '100%','background-size': 'cover', 'position': 'sticky',
   'z-index': '-1', 'height': '100vh', 'min-height': '568px' });
 
     caption = $('<div></div>').addClass(`regular-caption ${elmClass}`);
