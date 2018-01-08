@@ -46,7 +46,7 @@
   }
 } 
 
-@media only screen and (min-width: 1470px) and (max-width: 1550px) {
+@media only screen and (min-width: 1250px) and (max-width: 1550px) {
   #back {
     height: 25vh;
   }
@@ -140,7 +140,7 @@
 	}
 	#tec {
 		margin-top: 25%;
-		margin-left: 10%;
+		margin-left: 15%;
 		width: 25%;
 		z-index: 1;
 	}
