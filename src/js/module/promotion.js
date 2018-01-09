@@ -49,7 +49,7 @@
 
 	const divHead = $('<div></div>').addClass('col s12').css({ 'color': '#000' });
 
-	const titleOfHead = $("<h3>Show de Prêmios Sattrack</h3>\n");
+	const titleOfHead = $("<h3>Show de Prêmios SatTrack</h3>\n");
 
 	const bannerOfPromotion = $('<img src="' + require('../../images/test.jpg') + '">').css({ 'width': '100%' });
 

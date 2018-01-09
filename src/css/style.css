@@ -61,13 +61,13 @@
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 14%;
+    margin-top: 12%;
     margin-left: 40%;
     width: 17%;
 		z-index: 1;
   }
   #app-02 {
-    margin-top: 14%;
+    margin-top: 12%;
     margin-left: 65%;
     width: 15%;
     z-index: 1;
@@ -89,13 +89,13 @@
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 17%;
+    margin-top: 15%;
     margin-left: 40%;
     width: 17%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 17%;
+    margin-top: 15%;
     margin-left: 65%;
     width: 15%;
     z-index: 1;
@@ -120,13 +120,13 @@
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 28%;
+    margin-top: 26%;
     margin-left: 36%;
     width: 25%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 28%;
+    margin-top: 26%;
     margin-left: 67%;
     width: 23%;
     z-index: 1;
@@ -145,13 +145,13 @@
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 17%;
+    margin-top: 15%;
     margin-left: 40%;
     width: 17%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 17%;
+    margin-top: 15%;
     margin-left: 65%;
     width: 15%;
     z-index: 1;
@@ -173,13 +173,13 @@
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 15%;
+    margin-top: 13%;
     margin-left: 35%;
     width: 16%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 16%;
+    margin-top: 14%;
     margin-left: 65%;
     width: 15%;
     z-index: 1;
@@ -305,13 +305,13 @@ p {
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 32%;
+    margin-top: 30%;
     margin-left: 36%;
     width: 25%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 32%;
+    margin-top: 30%;
     margin-left: 67%;
     width: 23%;
     z-index: 1;
@@ -356,12 +356,12 @@ p {
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 90%;
+    margin-top: 88%;
     width: 45%;
     margin-left: 10px;
   }
   #app-02 {
-    margin-top: 90%;
+    margin-top: 88%;
     width: 53%;
     margin-left: 51%;
   }
@@ -451,13 +451,13 @@ footer.page-footer {
 		z-index: 1;
 	}
   #app-01 {
-    margin-top: 60%;
+    margin-top: 58%;
     margin-left: 16%;
     width: 30%;
     z-index: 1;
   }
   #app-02 {
-    margin-top: 60%;
+    margin-top: 58%;
     margin-left: 56%;
     width: 28%;
     z-index: 1;
@@ -490,14 +490,6 @@ footer.page-footer {
 .right-control {
   right: 0;
 }
-
-/* .clip-path-left {
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-}
-
-.clip-path-right {
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-} */
 
 ._container {
   width: 100%;
@@ -788,7 +780,7 @@ img.second-truck-tier {
   background-position: center !important;
   background: no-repeat;
   width: 50%;
-  height: 10vh;
+	height: 10vh;
 }
 
 .head-office-city {
@@ -810,7 +802,7 @@ img.second-truck-tier {
 
 .social-media-icons {
   text-align: center;
-  padding: 28px 0 !important;
+	padding: 15px 0 !important;
 }
 
 .social-media-icons img {
@@ -906,23 +898,23 @@ img.second-truck-tier {
   }
 
   .left-banner-slider {
-		width: 62.5%;
+		width: 65%;
   }
   
   .right-banner-slider {
-    width: 73%;
+    width: 64%;
 	}
 
 	#clip-left .slick-list {
-		clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 100% 0%);
+		clip-path: polygon(0% -55%, 27% 100%, 100% 100%, 100% 0%);
 	}
 
 	#clip-right .slick-list {
-		clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 62% 0%);
+		clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 70% 0%);
 	}
 
   .left-caption {
-    padding-left: 15% !important;
+    padding-left: 20% !important;
   }
 
   .menu-ul {
@@ -1062,7 +1054,7 @@ img.second-truck-tier {
   }
 
   .footer-first-child {
-    margin-top: 106px;
+    margin-top: 20% !important;
   }
 }
 
