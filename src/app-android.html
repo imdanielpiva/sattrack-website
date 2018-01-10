@@ -32,51 +32,20 @@
     </nav>
 	</div>
 
-	<style>
-		.mejs__overlay-button {	
-			background: url('./images/about.jpg') no-repeat;
-			background-position: 0 -39px;
-			height: 80px;
-			width: 80px;
-		}
-
-		.mejs__overlay {
-			-webkit-box-align: center;
-			-webkit-align-items: center;
-			-ms-flex-align: center;
-			align-items: center;
-			display: -webkit-box;
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: center;
-			-webkit-justify-content: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			left: 0;
-			position: absolute;
-			top: 0;
-		}
-	</style>
-	
 		<h1 style="padding: 3px;" class="center col s12 m12 l12 xl12 light">Instalando no Android</h1>
 		<p style="padding: 3px; color: #656565; font-size: 1.3em; text-align: center;" class="light col s12 m12 l12 xl12">
 			Saiba como instalar nosso <b style="color: #00b278;">App Sattrack</b> no seu Android. Instale já...
 		</p>
 
-		<!-- <div class="center responsive-video">
-			<iframe id="video-android" height="500" 
-				src="https://www.youtube.com/embed/__52TO9u9OM?enablejsapi=1&origin=http%3A%2F%2Flocalhost%3A8080&widgetid=1&rel=0" frameborder="0" allowfullscreen>
-			</iframe>
-		</div> -->
-		
-		<div > 
-			<video controls id="video-android" loop muted src="https://www.youtube.com/embed/__52TO9u9OM"
-			style="outline:none; width:100%; height: 600px;" tabindex="0" title="MediaElement">
-			</video>
+		<div id="mediaAndroid" class="mejs__overlay mejs__layer mejs__overlay-play">
+			<div class="mejs__overlay-button" role="button" tabindex="0" aria-label="Play" aria-pressed="false"></div>
 		</div>
+
+		<div>
+			<video controls id="video-android" muted src="https://www.youtube.com/embed/__52TO9u9OM" style="outline:none; width:100%; height: 600px;" tabindex="0" title="MediaElement"></video>
+		</div>
+
 		<div class="row center">
-			
 			<h5 class="light col s12 m12 l12 xl12">
 				<b>Atenção: leia o passo-a-passo<br>completo antes de seguir em frente!<br><br> </b>
 				1. Entre em <b><a style="color: #00b278;" href="https://app.sattrack.com.br/#/auth/login">app.sattrack.com.br</a></b><br><br>
