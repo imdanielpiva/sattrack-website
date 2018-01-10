@@ -915,7 +915,7 @@ img.second-truck-tier {
 		width: 100% !important;
 		height: 600px !important;
 		position: absolute !important;
-		top: calc(100% - (646px + 80px));
+		top: calc(100% - (66% + 80px));
 	}
 	#mep_0 {
 		width: 30% !important;
