@@ -32,9 +32,7 @@ function isMobile (a) {
         $('#left-banner').removeClass('m-tb-16');
 			}
 			
-			const player = new MediaElementPlayer('video-android', {
-				clickToPlayPause: true
-			});
+			const player = new MediaElementPlayer('video-android', {});
 
       $('.carousel.carousel-slider').Carousel({
         fullWidth: true,
