@@ -40,29 +40,7 @@ function isMobile (a) {
         padding: 4,
         dist: 0
 			});
-
-			function loadPromotionModal() {
-				const modalEl = document.getElementById('modal1');
-						
-				if (!modalEl) {
-					import('./src/js/module/promotion.js');
-					return true;
-				}
-
-				$('#modal1').modal('open');
-			}
 			
-			const desktopRibbon = $('#promo-desk');
-			const mobileRibbon = $('#promo-mobile');
-
-			if (desktopRibbon) {
-				desktopRibbon.click(loadPromotionModal);
-			} 
-
-			if (mobileRibbon) {
-				mobileRibbon.click(loadPromotionModal);
-			}
-
       $('.single-item').slick({
 				arrows: false,
 				infinite: true,
