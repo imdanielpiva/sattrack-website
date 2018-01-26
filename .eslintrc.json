@@ -9,6 +9,7 @@
             "functions": "ignore"
         }],
         "linebreak-style": 0,
-        "functionPrototypeMethods": true
+				"functionPrototypeMethods": true,
+				"indent": 0
     }
 }

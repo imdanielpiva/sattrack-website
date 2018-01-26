@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SatTrack Rastreamento e Logística - Landing Page do iOS</title>
+</head>
+
+<body style="background: linear-gradient(to bottom, #cfd9df, #e2ebf0);" id="bd">
+  <div data-scroll-index="0" id="home" class="navbar-fixed">
+    <nav class="white">
+      <div class="nav-wrapper _nav-wrapper-container">
+				<a href="/" class="brand-logo"><img src="images/logo.svg" /></a>
+				  <!-- Modal Trigger -->
+					<a href="#modal1" class="modal-trigger mobile-corner-ribbon mobile-top-right mobile-sticky mobile-red pulse" id="promo-mobile"><b style="font-size: 1.1em;">Promoção!</b></a>
+					<a href="#modal1" class="modal-trigger corner-ribbon top-right sticky red pulse" id="promo-desk"><b style="font-size: 1.1em;">Show de Prêmios. Venha conferir !!</b></a>
+        	<a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul class="menu-ul hide-on-med-and-down">
+          <li><a href="/">Início</a></li>
+          <li><a href="./app-android.html">App no Android</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile">
+          <li><a href="/">Início</a></li>
+          <li><a href="./app-android.html">App no Android</a></li>
+          <li data-scroll-nav="4" class="contact"><a onclick="$zopim.livechat.window.toggle()">Contato</a></li>
+					<a class="center-align white-text btn"  href="https://app.sattrack.com.br/#/auth/login">LOCALIZAR VEÍCULO</a>
+					<a class="blue darken-4 btn white-text" href="http://telemetria.sattrack.com.br/">TELEMETRIA</a>
+        </ul>
+      </div>
+    </nav>
+	</div>
+	
+		<h1 style="padding: 3px;" class="center col s12 m12 l12 xl12 light">Instalando no iOS</h1>
+		<p style="padding: 3px; color: #656565; font-size: 1.3em; text-align: center;" class="light col s12 m12 l12 xl12">
+			Saiba como instalar nosso <b style="color: #00b278;">App Sattrack</b> no seu iOS. Instale já...
+		</p>
+
+		<div>
+			<video controls id="video-android" muted src="https://www.youtube.com/embed/RclyfpJoI_E" style="outline:none; width:100%; height: 600px;" tabindex="0"></video>
+		</div>
+
+		<div class="row center">
+			<h5 class="light col s12 m12 l12 xl12">
+					<b>Atenção: leia o passo-a-passo<br>completo antes de seguir em frente!<br><br> </b>
+				1. Entre em <b><a style="color: #00b278;" href="https://app.sattrack.com.br/#/auth/login">app.sattrack.com.br</a></b><br><br>
+				2. Em seguida, dentro do aplicativo <b><a style="color: #00b278;" href="https://app.sattrack.com.br/#/auth/login">app.sattrack.com.br</a></b>,
+				<br>clique na opção compartilhar do Safari<br><br>
+				<span><img style="width: 30%;" src="./images/home-screen.png"></span><br><br>
+				3. Selecione a opção tela de início do Safari<br><br>
+				4. Selecione a opção "Concluído"<br><br>
+				<a onclick="identifyPlatform()" style="background-color: #00b278;" class="waves-effect waves-light btn white-text">Ir Para o Aplicativo</a><br><br>
+			</h5>
+		</div>
+
+  <footer data-scroll-index="4" class="page-footer" style="margin-top: 3%;">
+    <div class="container footer-container">
+      <div class="row">
+        <div class="col s12 xl4 logo-footer"><br><br><br>
+          <div class="col s12 xl12 social-media-icons"> 
+            <a href="https://www.facebook.com/sattrackrastreamento/"><img src="images/facebook.png"></a>
+            <a href="https://www.instagram.com/sattrackrastreamento/"><img src="images/instagram.png"></a>
+          </div>
+        </div>
+        <div class="center-align">
+          <div>
+            <ul style="margin-top: 0;" class="footer-contact footer-first-child col s12 l6 xl4">
+              <li><h5 class="head-office-city">Londrina</h5></li>
+              <li>
+                <i class="material-icons">phone</i>
+                <a class="white-text" href="#!"><span class="small-phone-number">43</span> <b class="phone-number">3372-3000</b></a>
+              </li>
+              <li>
+                <img src="./images/whats.png">
+                <a class="white-text" href="#!"><span class="small-phone-number">43</span> <b class="phone-number">99991-8921</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="center-align">
+          <div class="col s12 l6 xl4">
+            <ul class="footer-contact">
+              <li><h5 class="head-office-city">Maringá</h5></li>
+              <li>  
+                <i class="material-icons">phone</i>
+                <a class="white-text" href="#!"><b class="phone-number">4007-2800</b></a>
+              </li>
+              <li>
+                <img src="./images/whats.png">
+                <a class="white-text" href="#!"><span class="small-phone-number">44</span> <b class="phone-number">99134-7749</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        <p>Av. Henrique Mansano, 1595 - CEP:  86079-450 - Londrina</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) {
+        z._.push(c)
+      },
+      $ = z.s =
+      d.createElement(s),
+      e = d.getElementsByTagName(s)[0];
+    z.set = function (o) {
+      z.set.
+      _.push(o)
+    };
+    z._ = [];
+    z.set._ = [];
+    $.async = !0;
+    $.setAttribute("charset", "utf-8");
+    $zopim(function () {
+      $zopim.livechat.theme.setColor('#0D47A1');
+    });
+    $.src = "//v2.zopim.com/?3zcJibnHUlPbzAbC7a2yh8jkWpbHLEkf";
+    z.t = +new Date;
+    $.
+    type = "text/javascript";
+    e.parentNode.insertBefore($, e)
+	})(document, "script");
+	
+	function identifyPlatform() {
+		if (screen.width <= 768) {
+			window.location = 'https://app.sattrack.com.br/#/auth/login';
+			return true;
+		}
+		window.location = 'https://sattrack.com.br/app/';
+	}
+</script>
+</html>

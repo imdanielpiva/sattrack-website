@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "jquery": "^3.2.1",
+    "postcss-discard-duplicates": "^2.1.0",
     "uglify-es": "github:mishoo/UglifyJS2#harmony"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-preset-env": "^1.6.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
@@ -20,6 +22,7 @@
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "mediaelement": "^4.2.7",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
@@ -29,7 +32,7 @@
   "scripts": {
     "dev": "webpack",
     "watch": "webpack --watch",
-    "surge": "surge /home/dev/sattrack-website/dist/ wa.sattrack.surge.sh/"
+    "surge": "surge /home/dev/sattrack-website/dist"
   },
   "repository": {
     "type": "git",

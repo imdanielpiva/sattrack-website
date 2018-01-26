@@ -147,7 +147,7 @@ function isVehicleVisible() {
     $(document).ready(function () {
       if (screen.width < 950) {
         topOffset = -25;
-        
+
         $('#left-banner').removeClass('m-tb-16');
       }
 
@@ -156,10 +156,54 @@ function isVehicleVisible() {
         indicators: true,
         padding: 4,
         dist: 0
-      });
+			});
 
-      $('.modal').modal();
-      
+			function loadPromotionModal() {
+				const modalEl = document.getElementById('modal1');
+						
+				if (!modalEl) {
+					import('./module/promotion.js');
+					return true;
+				}
+
+				$('#modal1').modal('open');
+			}
+			
+			const desktopRibbon = $('#promo-desk');
+			const mobileRibbon = $('#promo-mobile');
+
+			if (desktopRibbon) {
+				desktopRibbon.click(loadPromotionModal);
+			} 
+
+			if (mobileRibbon) {
+				mobileRibbon.click(loadPromotionModal);
+			}
+
+      $('.single-item').slick({
+				arrows: false,
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: 30000,
+				dots: true
+			});
+			
+			$('.single-item-rtl-1').attr('id', 'clip-left').slick({
+				arrows: false,
+        autoplay: true,
+				autoplaySpeed: 10000,
+				dots: true,
+				rtl: false
+			});
+
+			$('.single-item-rtl-2').attr('id', 'clip-right').slick({
+				arrows: false,
+        autoplay: true,
+				autoplaySpeed: 10000,
+				dots: true,
+				rtl: false
+			});
+
       isVehicleVisible();
       $.scrollIt({
         easing: 'linear',
