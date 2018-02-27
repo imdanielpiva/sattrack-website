@@ -132,12 +132,12 @@ $(window).resize(() => {
   renderElement();
 });
 
-addElement('slide-left', 'main-car-slide.jpg', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde seus veículos estão em tempo real e tenha todos os detalhes sobre seus veículos de qualquer lugar que estiver com qualquer dispositivo com conectado a internet.');
+addElement('slide-left', 'main-car-slide.jpg', 'left-caption', 'Rastreamento online de onde estiver.', 'Saiba onde estão seus veículos em tempo real, e obtenha todas as informações de qualquer lugar com qualquer dispositivo móvel conectado a internet.');
 addElement('slide-left', 'car-slide-5.jpg', 'left-caption', 'Cerca eletrônica.', 'Proteja seu veículo usando a cerca eletrônica, uma funcionalidade que permite que você determine um perímetro para seu veículo, assim o sistema irá automaticamente te alertar caso seu veículo não esteja dentro do perímetro delimitado.');
-addElement('slide-left', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a iginção do seu veículo for ativida.');
-addElement('slide-right', 'truck-slide-5.jpg', 'right-caption', 'Controle total da sua frota.', 'Com a tecnologia de telemetria de dados da Sattrack, as informações coletadas dos veículos são analisadas em dados, com isso é possível acompanhar o comportamento do motorista ao volante, identificando infrações que aumentam o risco de acidente, desperdiço de combustível e redução da disponibilidade da frota.');
-addElement('slide-right', 'truck-slide-3.jpg', 'right-caption', 'Analise sua frota.', 'Saiba das informações detalhadamente, como tempo de utilização do veículo, velocidade média e máxima, distância percorrida, ponto inicial e ponto final com histórico de até 6 meses.');
-addElement('slide-right', 'truck-slide-1.jpeg', 'right-caption', 'Bloqueio imediato.', 'Em caso de roubo ou circunstâncias que podem colocar seu veículo em perigo, baster pedir o bloqueio imediato do veículo.');
+addElement('slide-left', 'car-ignition.jpg', 'left-caption', 'Alerta de ignição.', 'Basta ativar o Alerta de Ignição e você será notificado em tempo real quando a ignição do seu veículo for ativada.');
+addElement('slide-right', 'truck-slide-5.jpg', 'right-caption', 'Controle total da sua frota.', 'Com a tecnologia de telemetria da SatTrack, é possível analisar o comportamento do motorista e identificar ações que aumentam o desgaste do veículo e os riscos de acidentes, diminuindo assim o desperdício de combustível e o custo de manutenção da frota.');
+addElement('slide-right', 'truck-slide-3.jpg', 'right-caption', 'Analise sua frota.', 'Tenha informações detalhadas, como: tempo de utilização do veículo, velocidade média, distância percorrida, ponto inicial e ponto final com histórico de até 6 meses.');
+addElement('slide-right', 'truck-slide-1.jpeg', 'right-caption', 'Bloqueio imediato.', 'Em caso de roubo ou circunstâncias que podem colocar seu veículo em perigo, basta pedir o bloqueio entrando em contato com a central.');
 
 // stuffs.css
 require('./src/css/materialize.min.css');
